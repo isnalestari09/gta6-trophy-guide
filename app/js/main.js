@@ -1,139 +1,141 @@
-/* main.js — boots Leonida Platinum: loads the trophy data, wires the tracker. */
-import { loadEarned, saveEarned, exportEarned, importEarned, readHashState, writeHashState, shareLink, DEMO_EARNED } from "./store.js";
-import { filterTrophies, sortTrophies } from "./filters.js";
-import { updateProgress, renderChecklist, renderDetail, renderRoadmap, renderMissables } from "./views.js";
+// Leonida Platinum v3 — boot and wiring: loads the trophy data, renders the
+// views, and keeps the checklist, filters, spoiler setting and saved
+// progress in sync. Progress is saved in localStorage on every change.
+import { loadSavedState, saveState, readShareHash, buildShareLink, exportProgress, importProgressFile, DEMO_EARNED } from './store.js';
+import { renderChecklist, renderDetail, renderRoadmap, renderMissables, renderAbout } from './views.js';
+import { computeStats } from './stats.js';
 
-const state = {
-  trophies: [],
-  earned: loadEarned(),
-  openId: null,
-  view: "checklist",
-  query: "",
-  grade: "all",
-  kind: "all",
-  missableOnly: false,
-  earnedOnly: false,
-  spoilers: false,
-};
+const state = loadSavedState();
+const params = new URLSearchParams(location.search);
 
-function showView(view) {
-  state.view = view;
-  for (const button of document.querySelectorAll("#tabs button")) {
-    button.classList.toggle("active", button.dataset.view === view);
+// A share link in the hash overrides saved progress for this visit.
+const shared = readShareHash();
+if (shared) state.earned = shared;
+if (params.get('demo') === '1') state.earned = [...DEMO_EARNED];
+if (params.get('spoilers') === 'on') state.spoilers = true;
+
+let trophies = [];
+let selectedId = null;
+const filters = { query: '', grade: '', kind: '', missableOnly: false, earnedOnly: false };
+
+function earnedSet() {
+  return new Set(state.earned);
+}
+
+function refreshProgress() {
+  const stats = computeStats(trophies, earnedSet());
+  document.getElementById('earnedCount').textContent = String(stats.earned);
+  document.getElementById('progressFill').style.width = `${stats.percent}%`;
+  document.getElementById('progressNote').textContent =
+    stats.earned >= stats.total
+      ? 'Platinum earned — congratulations, Leonida Legend.'
+      : `${stats.earned} of ${stats.total} trophies · about ${stats.remainingHours} hours left to the platinum`;
+}
+
+function renderAll() {
+  renderChecklist(trophies, state, filters, selectTrophy, selectedId);
+  renderDetail(trophies.find((t) => t.id === selectedId) ?? null, state);
+  renderRoadmap(trophies, state);
+  renderMissables(trophies, state);
+  renderAbout(trophies, state);
+  refreshProgress();
+}
+
+function selectTrophy(id, options = {}) {
+  if (options.toggleEarned) {
+    const set = earnedSet();
+    if (set.has(id)) set.delete(id);
+    else set.add(id);
+    state.earned = [...set];
+    saveState(state);
   }
-  for (const section of document.querySelectorAll(".view")) {
-    section.hidden = section.id !== `view-${view}`;
+  selectedId = id;
+  renderAll();
+}
+
+function showView(name) {
+  for (const button of document.querySelectorAll('#tabs .tab')) {
+    button.classList.toggle('active', button.dataset.view === name);
   }
-  if (view === "roadmap") renderRoadmap(state.trophies, state.earned);
-  if (view === "missables") renderMissables(state.trophies, state.earned);
-  writeHashState(view, state.earned, state.openId);
-}
-
-function refresh() {
-  updateProgress(state.trophies, state.earned);
-  const sorted = sortTrophies(state.trophies);
-  const visible = filterTrophies(sorted, state);
-  renderChecklist(visible, state, onToggle, onOpen);
-  const open = state.trophies.find((t) => t.id === state.openId) || null;
-  renderDetail(open, state);
-  if (state.view === "roadmap") renderRoadmap(state.trophies, state.earned);
-  if (state.view === "missables") renderMissables(state.trophies, state.earned);
-}
-
-function onToggle(id, checked) {
-  if (checked) state.earned.add(id);
-  else state.earned.delete(id);
-  saveEarned(state.earned);
-  refresh();
-}
-
-function onOpen(id) {
-  state.openId = id;
-  const open = state.trophies.find((t) => t.id === id) || null;
-  renderDetail(open, state);
-  writeHashState(state.view, state.earned, state.openId);
-  document.getElementById("detailPane").scrollIntoView({ behavior: "smooth", block: "nearest" });
-}
-
-function wireToolbar() {
-  document.getElementById("searchBox").addEventListener("input", (event) => {
-    state.query = event.target.value;
-    refresh();
-  });
-  document.getElementById("gradeFilter").addEventListener("change", (event) => {
-    state.grade = event.target.value;
-    refresh();
-  });
-  document.getElementById("kindFilter").addEventListener("change", (event) => {
-    state.kind = event.target.value;
-    refresh();
-  });
-  document.getElementById("missableOnly").addEventListener("change", (event) => {
-    state.missableOnly = event.target.checked;
-    refresh();
-  });
-  document.getElementById("earnedOnly").addEventListener("change", (event) => {
-    state.earnedOnly = event.target.checked;
-    refresh();
-  });
-  document.getElementById("spoilerToggle").addEventListener("change", (event) => {
-    state.spoilers = event.target.checked;
-    refresh();
-  });
-  document.getElementById("exportBtn").addEventListener("click", () => exportEarned(state.earned));
-  document.getElementById("importBtn").addEventListener("click", () => document.getElementById("importFile").click());
-  document.getElementById("importFile").addEventListener("change", async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
-    try {
-      state.earned = await importEarned(file);
-      saveEarned(state.earned);
-      refresh();
-    } catch {
-      alert("That file is not a Leonida Platinum progress file.");
-    }
-    event.target.value = "";
-  });
-  document.getElementById("shareBtn").addEventListener("click", async () => {
-    const link = shareLink(state.earned);
-    try {
-      await navigator.clipboard.writeText(link);
-      document.getElementById("shareBtn").textContent = "Link copied!";
-      setTimeout(() => { document.getElementById("shareBtn").textContent = "Copy share link"; }, 2000);
-    } catch {
-      prompt("Copy your share link:", link);
-    }
-  });
-  document.getElementById("resetBtn").addEventListener("click", () => {
-    if (confirm("Clear all earned trophies?")) {
-      state.earned = new Set();
-      saveEarned(state.earned);
-      refresh();
-    }
-  });
-  for (const button of document.querySelectorAll("#tabs button")) {
-    button.addEventListener("click", () => showView(button.dataset.view));
+  for (const section of document.querySelectorAll('.view')) {
+    section.hidden = section.id !== `view-${name}`;
   }
+}
+
+function readFiltersFromDom() {
+  filters.query = document.getElementById('searchInput').value;
+  filters.grade = document.getElementById('gradeFilter').value;
+  filters.kind = document.getElementById('kindFilter').value;
+  filters.missableOnly = document.getElementById('missableOnly').checked;
+  filters.earnedOnly = document.getElementById('earnedOnly').checked;
+  state.spoilers = document.getElementById('spoilerToggle').checked;
+  saveState(state);
 }
 
 async function boot() {
-  const hash = readHashState();
-  if (hash.shared) {
-    state.earned = hash.shared;
-    saveEarned(state.earned);
-  } else if (hash.demo) {
-    state.earned = new Set(DEMO_EARNED);
-    saveEarned(state.earned);
-  }
-  if (hash.openId) state.openId = hash.openId;
-  if (hash.spoilers) state.spoilers = true;
-  const response = await fetch("data/trophies.json");
+  const response = await fetch('data/trophies.json');
   const data = await response.json();
-  state.trophies = data.trophies;
-  wireToolbar();
-  document.getElementById("spoilerToggle").checked = state.spoilers;
-  showView(["checklist", "roadmap", "missables", "about"].includes(hash.view) ? hash.view : "checklist");
-  refresh();
+  trophies = data.trophies;
+
+  document.getElementById('spoilerToggle').checked = state.spoilers;
+  for (const button of document.querySelectorAll('#tabs .tab')) {
+    button.addEventListener('click', () => showView(button.dataset.view));
+  }
+  for (const id of ['searchInput', 'gradeFilter', 'kindFilter', 'missableOnly', 'earnedOnly', 'spoilerToggle']) {
+    document.getElementById(id).addEventListener('input', () => {
+      readFiltersFromDom();
+      renderAll();
+    });
+  }
+  document.addEventListener('leonida:toggle-earned', (event) => selectTrophy(event.detail, { toggleEarned: true }));
+
+  document.getElementById('exportBtn').addEventListener('click', () => {
+    exportProgress(state);
+    document.getElementById('saveStatus').textContent = 'Progress exported as a JSON file.';
+  });
+  document.getElementById('importInput').addEventListener('change', async (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    try {
+      const imported = await importProgressFile(file);
+      state.earned = imported.earned;
+      state.spoilers = imported.spoilers;
+      document.getElementById('spoilerToggle').checked = state.spoilers;
+      saveState(state);
+      renderAll();
+      document.getElementById('saveStatus').textContent = `Imported ${imported.earned.length} earned trophies.`;
+    } catch {
+      document.getElementById('saveStatus').textContent = 'That file could not be imported.';
+    }
+    event.target.value = '';
+  });
+  document.getElementById('shareBtn').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(buildShareLink(state.earned));
+      document.getElementById('saveStatus').textContent = 'Share link copied — earned trophies are in the link.';
+    } catch {
+      document.getElementById('saveStatus').textContent = buildShareLink(state.earned);
+    }
+  });
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    state.earned = [];
+    saveState(state);
+    renderAll();
+    document.getElementById('saveStatus').textContent = 'Progress reset.';
+  });
+
+  // Deep links: #trophy=17 opens that trophy's guide; #roadmap / #missables
+  // open those views; #sources scrolls the open guide to its sources.
+  const hashTrophy = location.hash.match(/trophy=(\d+)/);
+  if (hashTrophy) selectedId = Number(hashTrophy[1]);
+  if (location.hash.includes('roadmap')) showView('roadmap');
+  if (location.hash.includes('missables')) showView('missables');
+  renderAll();
+  if (location.hash.includes('sources')) {
+    const pane = document.getElementById('detailPane');
+    const sources = pane.querySelector('.sources');
+    if (sources) pane.scrollTop = sources.offsetTop - pane.offsetTop - 10;
+  }
 }
 
 boot();

@@ -1,4 +1,5 @@
-node_modules/
 out/
+node_modules/
 .DS_Store
-*.log
+gta6-trophy-guide-01-kit/
+kit.tar.gz

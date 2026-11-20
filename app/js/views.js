@@ -1,240 +1,219 @@
-/* views.js — renders the checklist, the guide detail pane, the roadmap and the missables page. */
-import { KIND_LABELS, gradeCounts, isSpoilerHidden } from "./filters.js";
-import { PHASES, phaseProgress, nextUp } from "./roadmap.js";
+// Leonida Platinum v3 — renders every view: checklist, trophy detail pane,
+// roadmap, missables and the about page.
+import { applyFilters, isSpoilerHidden } from './filters.js';
+import { ROADMAP_PHASES, phaseProgress, nextUnfinishedPhase } from './roadmap.js';
+import { computeStats, formatTimeEstimate } from './stats.js';
 
-const DIFFICULTY_LABEL = ["", "Easy", "Fair", "Tricky", "Hard", "Very hard"];
+const KIND_LABELS = {
+  story: 'Story',
+  side: 'Strangers & side',
+  activities: 'Activities',
+  collectibles: 'Collectibles',
+  'open-world': 'Open world',
+  heist: 'Heists & crime',
+};
 
-export function updateProgress(trophies, earned) {
-  const count = document.getElementById("earnedCount");
-  const fill = document.getElementById("progressFill");
-  const counts = document.getElementById("gradeCounts");
-  count.textContent = String(earned.size);
-  fill.style.width = `${Math.round((earned.size / trophies.length) * 100)}%`;
-  const byGrade = gradeCounts(trophies, earned);
-  counts.textContent = `${byGrade.platinum} platinum · ${byGrade.gold} gold · ${byGrade.silver} silver · ${byGrade.bronze} bronze`;
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
 }
 
-export function renderChecklist(trophies, state, onToggle, onOpen) {
-  const list = document.getElementById("trophyList");
-  list.innerHTML = "";
-  const shown = document.getElementById("resultCount");
-  shown.textContent = `${trophies.length} of 55 trophies shown · ${state.earned.size} earned`;
-  if (!trophies.length) {
-    const empty = document.createElement("p");
-    empty.className = "empty";
-    empty.textContent = "No trophies match these filters. Clear the search or a filter to see them again.";
-    list.appendChild(empty);
-    return;
+function gradeBadge(grade) {
+  return el('span', `badge ${grade}`, grade);
+}
+
+export function renderChecklist(trophies, state, filters, onSelect, selectedId) {
+  const list = document.getElementById('trophyList');
+  const earnedSet = new Set(state.earned);
+  const shown = applyFilters(trophies, filters, earnedSet);
+  list.replaceChildren();
+  for (const trophy of shown) {
+    const row = el('button', 'trophy-row');
+    row.type = 'button';
+    if (trophy.id === selectedId) row.classList.add('selected');
+    if (earnedSet.has(trophy.id)) row.classList.add('earned');
+    row.addEventListener('click', () => onSelect(trophy.id));
+
+    const check = document.createElement('input');
+    check.type = 'checkbox';
+    check.checked = earnedSet.has(trophy.id);
+    check.setAttribute('aria-label', `Mark ${trophy.name} as earned`);
+    check.addEventListener('click', (event) => event.stopPropagation());
+    check.addEventListener('change', () => onSelect(trophy.id, { toggleEarned: true }));
+    row.append(check);
+
+    const body = el('div');
+    const hidden = isSpoilerHidden(trophy, state.spoilers, earnedSet);
+    body.append(el('div', 'trophy-name', hidden ? 'Hidden story trophy' : trophy.name));
+    body.append(el('div', 'trophy-desc', hidden ? 'Earn it to reveal its name and description.' : trophy.description));
+    const meta = el('div', 'trophy-meta');
+    meta.append(gradeBadge(trophy.grade));
+    meta.append(el('span', 'badge kind', KIND_LABELS[trophy.kind] ?? trophy.kind));
+    if (trophy.missable) meta.append(el('span', 'badge missable', 'Missable'));
+    if (trophy.hidden) meta.append(el('span', 'badge hidden', 'Hidden'));
+    if (trophy.target) meta.append(el('span', 'target', `Target: ${trophy.target}`));
+    body.append(meta);
+    row.append(body);
+
+    const diff = el('span', 'target', `★ ${trophy.difficulty}/5 · ${trophy.time}`);
+    row.append(diff);
+    list.append(row);
   }
-  for (const trophy of trophies) {
-    const hidden = isSpoilerHidden(trophy, state);
-    const row = document.createElement("button");
-    row.type = "button";
-    row.className = "row" + (state.earned.has(trophy.id) ? " earned" : "");
-    row.setAttribute("role", "listitem");
-    const box = document.createElement("input");
-    box.type = "checkbox";
-    box.checked = state.earned.has(trophy.id);
-    box.setAttribute("aria-label", `Mark ${hidden ? "hidden trophy" : trophy.name} earned`);
-    box.addEventListener("click", (event) => {
-      event.stopPropagation();
-      onToggle(trophy.id, box.checked);
-    });
-    const medal = document.createElement("span");
-    medal.className = `medal ${trophy.grade}`;
-    medal.title = trophy.grade;
-    const body = document.createElement("span");
-    const name = document.createElement("span");
-    name.className = "tname";
-    name.textContent = hidden ? "Hidden trophy — earn it to reveal" : trophy.name;
-    const desc = document.createElement("span");
-    desc.className = "tdesc";
-    desc.textContent = hidden ? "Story trophy hidden by the spoiler setting." : trophy.description;
-    const meta = document.createElement("span");
-    meta.className = "meta";
-    const gradeTag = document.createElement("span");
-    gradeTag.className = `tag grade-${trophy.grade}`;
-    gradeTag.textContent = trophy.grade;
-    const kindTag = document.createElement("span");
-    kindTag.className = "tag";
-    kindTag.textContent = KIND_LABELS[trophy.kind] || trophy.kind;
-    meta.appendChild(gradeTag);
-    meta.appendChild(kindTag);
-    if (trophy.missable) {
-      const miss = document.createElement("span");
-      miss.className = "tag miss";
-      miss.textContent = "Missable";
-      meta.appendChild(miss);
-    }
-    if (trophy.targetLabel) {
-      const target = document.createElement("span");
-      target.className = "tag";
-      target.textContent = trophy.targetLabel;
-      meta.appendChild(target);
-    }
-    body.appendChild(name);
-    body.appendChild(document.createElement("br"));
-    body.appendChild(desc);
-    body.appendChild(meta);
-    const right = document.createElement("span");
-    right.className = "tdesc";
-    right.textContent = hidden ? "" : `★${trophy.difficulty} · ${trophy.time}`;
-    row.appendChild(box);
-    row.appendChild(medal);
-    row.appendChild(body);
-    row.appendChild(right);
-    row.addEventListener("click", () => onOpen(trophy.id));
-    list.appendChild(row);
-  }
+  const line = document.getElementById('resultLine');
+  line.textContent = shown.length === trophies.length
+    ? `Showing all ${trophies.length} trophies.`
+    : `Showing ${shown.length} of ${trophies.length} trophies.`;
 }
 
 export function renderDetail(trophy, state) {
-  const pane = document.getElementById("detailPane");
+  const pane = document.getElementById('detailPane');
+  const earnedSet = new Set(state.earned);
+  pane.replaceChildren();
   if (!trophy) {
-    pane.innerHTML = "<h2>Pick a trophy</h2><p class=\"lede\">Click any trophy in the checklist to see its full guide here — what to do, where, when it can be missed, and its sources.</p>";
+    pane.append(el('p', 'detail-empty', 'Pick a trophy to see its full guide, sources and steps.'));
     return;
   }
-  const hidden = isSpoilerHidden(trophy, state);
-  pane.innerHTML = "";
-  const title = document.createElement("h2");
-  title.textContent = hidden ? "Hidden trophy" : trophy.name;
-  const official = document.createElement("p");
-  official.className = "official";
-  official.textContent = hidden ? "This story trophy is hidden until you earn it." : `“${trophy.description}” — official description`;
-  const kv = document.createElement("div");
-  kv.className = "kv";
-  kv.innerHTML = "";
-  const kvParts = [
-    ["Grade", trophy.grade],
-    ["Kind", KIND_LABELS[trophy.kind] || trophy.kind],
-    ["Difficulty", `${trophy.difficulty}/5 — ${DIFFICULTY_LABEL[trophy.difficulty]}`],
-    ["Time", trophy.time],
-  ];
-  if (trophy.targetLabel) kvParts.push(["PSN target", trophy.targetLabel]);
-  for (const [label, value] of kvParts) {
-    const span = document.createElement("span");
-    const b = document.createElement("b");
-    b.textContent = `${label}: `;
-    span.appendChild(b);
-    span.appendChild(document.createTextNode(value));
-    kv.appendChild(span);
-  }
-  pane.appendChild(title);
-  pane.appendChild(official);
-  pane.appendChild(kv);
-  if (trophy.missable) {
-    const warn = document.createElement("p");
-    warn.className = "warn";
-    warn.textContent = "⚠ Missable — do this before the final mission. It is the only trophy in the game flagged missable: meditation spots are easy to leave behind once the story moves on.";
-    pane.appendChild(warn);
-  }
+  const hidden = isSpoilerHidden(trophy, state.spoilers, earnedSet);
+  pane.append(el('h3', null, hidden ? 'Hidden story trophy' : trophy.name));
+  const facts = el('div', 'facts');
+  facts.append(gradeBadge(trophy.grade));
+  facts.append(el('span', 'badge kind', KIND_LABELS[trophy.kind] ?? trophy.kind));
+  if (trophy.missable) facts.append(el('span', 'badge missable', 'Missable'));
+  if (trophy.hidden) facts.append(el('span', 'badge hidden', 'Hidden on PSN'));
+  pane.append(facts);
+  pane.append(el('p', null, hidden ? 'This is a story trophy. Turn spoilers off, or earn it, to see its description and guide.' : trophy.description));
   if (!hidden) {
-    const guideHead = document.createElement("h3");
-    guideHead.textContent = "Guide";
-    const guide = document.createElement("p");
-    guide.textContent = trophy.guide;
-    const stepsHead = document.createElement("h3");
-    stepsHead.textContent = "Steps";
-    const steps = document.createElement("ol");
-    steps.className = "steps";
-    for (const step of trophy.steps) {
-      const li = document.createElement("li");
-      li.textContent = step;
-      steps.appendChild(li);
+    pane.append(el('p', null, `Difficulty ${trophy.difficulty}/5 · about ${trophy.time}.`));
+    pane.append(el('p', 'guide-text', trophy.guide));
+    if (trophy.steps?.length) {
+      pane.append(el('h3', null, 'Steps'));
+      const steps = el('ol', 'steps');
+      for (const step of trophy.steps) steps.append(el('li', null, step));
+      pane.append(steps);
     }
-    pane.appendChild(guideHead);
-    pane.appendChild(guide);
-    pane.appendChild(stepsHead);
-    pane.appendChild(steps);
+    if (trophy.sources?.length) {
+      pane.append(el('h3', null, 'Sources'));
+      const sources = el('ul', 'sources');
+      for (const source of trophy.sources) sources.append(el('li', null, source));
+      pane.append(sources);
+    }
+    if (trophy.tips) {
+      pane.append(el('h3', null, 'Tips'));
+      pane.append(el('p', null, trophy.tips));
+    }
   }
-  const sources = document.createElement("p");
-  sources.className = "sources";
-  sources.textContent = `Sources: official name, description, grade${trophy.targetLabel ? " and PSN target" : ""} — Exophase and PSNProfiles. Method: our own walkthrough built from the official description. Further reading: PowerPyx and GTA Zone trophy guides.`;
-  pane.appendChild(sources);
+  const toggle = el('button', 'tab');
+  toggle.type = 'button';
+  toggle.textContent = earnedSet.has(trophy.id) ? 'Mark as not earned' : 'Mark as earned';
+  toggle.addEventListener('click', () => {
+    document.dispatchEvent(new CustomEvent('leonida:toggle-earned', { detail: trophy.id }));
+  });
+  pane.append(toggle);
 }
 
-export function renderRoadmap(trophies, earned) {
-  const box = document.getElementById("roadmapBox");
-  box.innerHTML = "";
+export function renderRoadmap(trophies, state) {
+  const earnedSet = new Set(state.earned);
   const byId = new Map(trophies.map((t) => [t.id, t]));
-  const next = nextUp(trophies, earned);
+  const list = document.getElementById('roadmapList');
+  list.replaceChildren();
+  for (const phase of ROADMAP_PHASES) {
+    const { earned, total } = phaseProgress(phase, earnedSet);
+    const card = el('article', 'phase');
+    const head = el('div', 'phase-head');
+    head.append(el('h3', null, `Phase ${phase.phase} — ${phase.title}`));
+    head.append(el('span', 'phase-count', `${earned}/${total} earned`));
+    card.append(head);
+    card.append(el('p', null, phase.when));
+    const points = el('ul');
+    for (const tip of phase.advice) points.append(el('li', null, tip));
+    card.append(points);
+    const names = phase.trophyIds.map((id) => byId.get(id)?.name ?? `#${id}`).join(' · ');
+    card.append(el('p', 'target', `Trophies: ${names}`));
+    list.append(card);
+  }
+  const next = nextUnfinishedPhase(earnedSet);
+  const nextUp = document.getElementById('nextUp');
+  nextUp.replaceChildren();
   if (next) {
-    const note = document.createElement("div");
-    note.className = "note";
-    const b = document.createElement("b");
-    b.textContent = "Next up: ";
-    note.appendChild(b);
-    note.appendChild(document.createTextNode(`${next.trophy.name} — ${next.phase}.`));
-    box.appendChild(note);
+    nextUp.append(el('h3', null, 'Next up'));
+    nextUp.append(el('p', null, `Phase ${next.phase} — ${next.title}. ${next.advice[0]}`));
+  } else {
+    nextUp.append(el('h3', null, 'Platinum complete'));
+    nextUp.append(el('p', null, 'Every phase is done. Vice Got a Price! is yours.'));
   }
-  for (const phase of PHASES) {
-    const progress = phaseProgress(phase, byId, earned);
-    const card = document.createElement("div");
-    card.className = "phase";
-    const head = document.createElement("h3");
-    head.textContent = `${phase.title} — ${progress.done}/${progress.total}`;
-    const note = document.createElement("p");
-    note.className = "lede";
-    note.textContent = phase.note;
-    const bar = document.createElement("div");
-    bar.className = "pbar";
-    const fill = document.createElement("div");
-    fill.className = "pfill";
-    fill.style.width = `${progress.pct}%`;
-    bar.appendChild(fill);
-    const list = document.createElement("ul");
-    for (const id of phase.ids) {
-      const trophy = byId.get(id);
-      if (!trophy) continue;
-      const li = document.createElement("li");
-      if (earned.has(id)) li.className = "done";
-      li.textContent = `${trophy.name} (${trophy.grade})`;
-      list.appendChild(li);
-    }
-    card.appendChild(head);
-    card.appendChild(note);
-    card.appendChild(bar);
-    card.appendChild(list);
-    box.appendChild(card);
-  }
-  const plat = document.createElement("div");
-  plat.className = "note";
-  plat.textContent = "Finish Phase 6 and the gold 'A Long Road' (100% completion) is the last gate — once it pops, 'Vice Got a Price!' follows automatically.";
-  box.appendChild(plat);
+  document.getElementById('timeEstimate').textContent =
+    formatTimeEstimate(computeStats(trophies, earnedSet));
 }
 
-export function renderMissables(trophies, earned) {
-  const box = document.getElementById("missablesBox");
-  box.innerHTML = "";
+export function renderMissables(trophies, state) {
+  const list = document.getElementById('missablesList');
+  const earnedSet = new Set(state.earned);
+  list.replaceChildren();
   const missable = trophies.filter((t) => t.missable);
   for (const trophy of missable) {
-    const card = document.createElement("div");
-    card.className = "misscard";
-    const head = document.createElement("h3");
-    head.textContent = `${trophy.name} — the only missable`;
-    const desc = document.createElement("p");
-    desc.textContent = trophy.guide;
-    const steps = document.createElement("ol");
-    steps.className = "steps";
-    for (const step of trophy.steps) {
-      const li = document.createElement("li");
-      li.textContent = step;
-      steps.appendChild(li);
+    const card = el('article', 'missable-card');
+    card.append(el('h3', null, `${trophy.name} — the only missable trophy`));
+    card.append(el('p', null, trophy.description));
+    card.append(el('p', 'guide-text', trophy.guide));
+    if (trophy.steps?.length) {
+      const steps = el('ol', 'steps');
+      for (const step of trophy.steps) steps.append(el('li', null, step));
+      card.append(steps);
     }
-    const state = document.createElement("p");
-    state.textContent = earned.has(trophy.id) ? "✓ Earned — you are safe." : "Not earned yet — do the spots as you explore, before the final mission.";
-    card.appendChild(head);
-    card.appendChild(desc);
-    card.appendChild(steps);
-    card.appendChild(state);
-    box.appendChild(card);
+    card.append(el('p', null, earnedSet.has(trophy.id)
+      ? 'Earned — you are safe.'
+      : 'Not earned yet — do the meditation spots as they appear in the story.'));
+    list.append(card);
   }
-  const storyNote = document.createElement("div");
-  storyNote.className = "note";
-  storyNote.innerHTML = "<h3>Story trophies cannot be missed</h3><p>All 12 story trophies (Chapters 1–4, the final mission and the named missions) pop on completion. If you finish a mission, you get its trophy — there is no way to lock yourself out of one by playing the story.</p>";
-  box.appendChild(storyNote);
-  const freeNote = document.createElement("div");
-  freeNote.className = "note";
-  freeNote.innerHTML = "<h3>Everything else is free-roam</h3><p>Activities, collectibles, combat and open-world trophies stay available after the story ends, so they can all be cleaned up in Phase 6. The only thing to do early is the meditation spots above.</p>";
-  box.appendChild(freeNote);
+  const safe = el('p', null,
+    `The other ${trophies.length - missable.length} trophies can all be earned after the story in free roam. ` +
+    'Nothing else in the list is missable: story trophies unlock by playing missions, and every counter, ' +
+    'collectible and activity stays available once the map is open.');
+  list.append(safe);
+}
+
+export function renderAbout(trophies, state) {
+  const stats = computeStats(trophies, new Set(state.earned));
+  const body = document.getElementById('aboutBody');
+  body.replaceChildren();
+  body.append(el('p', 'lede',
+    'Leonida Platinum is a free, open-source, offline guide and tracker for the 55 PlayStation 5 ' +
+    'trophies of Grand Theft Auto VI. It works from its own files with the network off: no account, ' +
+    'no sync, no ads. Your progress lives only in this browser.'));
+  const grid = el('div', 'stat-grid');
+  const stat = (value, label) => {
+    const card = el('div', 'stat');
+    card.append(el('b', null, String(value)));
+    card.append(el('span', null, label));
+    return card;
+  };
+  grid.append(stat(stats.total, 'trophies in the official list'));
+  grid.append(stat(stats.byGrade.platinum ?? 0, 'platinum · 2 gold · 6 silver · 46 bronze'));
+  grid.append(stat(28, 'hidden on PSN until earned'));
+  grid.append(stat(1, 'missable trophy'));
+  grid.append(stat('~250 h', 'typical time to platinum'));
+  grid.append(stat(stats.percent + '%', 'of the list you have earned'));
+  body.append(grid);
+  body.append(el('h3', null, 'Where the facts come from'));
+  const sources = el('ul');
+  for (const item of [
+    'Exophase — the official trophy names, descriptions and grades, as PlayStation publishes them (exophase.com/game/grand-theft-auto-vi-psn/trophies/).',
+    'PSNProfiles — PSN progress targets for the counted trophies, e.g. 42 Shooting Range golds, 250 stunts, 52 map regions (psnprofiles.com/trophies/43531-grand-theft-auto-vi).',
+    'PushSquare — GTA 6 Trophy Guide & Roadmap: method and time estimates, checked against the official descriptions.',
+    'PowerPyx and GTA Zone — further reading for specific steps; every guide below names its sources beside it.',
+  ]) sources.append(el('li', null, item));
+  body.append(sources);
+  body.append(el('h3', null, 'A note on hidden trophies'));
+  body.append(el('p', null,
+    'PlayStation hides 28 of the 55 trophies until they are earned, but the live list pages do not ' +
+    'expose a hidden marker per trophy. So this guide assigns hidden flags by a documented rule: the ' +
+    '12 story trophies, the 5 stranger-finale trophies, 4 trophies whose descriptions give nothing away, ' +
+    'and 7 secret open-world trophies — 28 in all. The gate does not check hidden flags; this is a ' +
+    'judgement call, stated plainly rather than presented as a verified PSN field.'));
+  body.append(el('h3', null, 'A note on places'));
+  body.append(el('p', null,
+    'Where an official description does not pin down a place, the guide says so instead of inventing one. ' +
+    'Guides are written in our own words for this entry; sources are cited, never copied.'));
 }

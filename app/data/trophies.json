@@ -1,339 +1,1100 @@
 {
- "game": "Grand Theft Auto VI",
- "platform": "PlayStation 5",
- "list": "Official 55 trophies, cross-checked 2026-11-20 against Exophase and PSNProfiles (both agree with the kit's frozen list on every name, description and grade). PSN targets from PSNProfiles. Hidden flags: 28 trophies whose descriptions would spoil the story, as PSN hides them.",
- "trophies": [
-  {
-   "id": 1, "name": "Vice Got a Price!", "description": "Congratulations! You're a Leonida Legend.", "grade": "platinum", "hidden": false, "kind": "platinum", "missable": false, "target": null, "targetLabel": null, "difficulty": 5, "time": "60+ hours",
-   "guide": "The platinum pops the moment the other 54 trophies are yours, so there is no separate task here. Work the roadmap in order — story first, then side strands, activities, collectibles, combat and the open-world cleanup — and treat the gold 'A Long Road' (100% completion) as the last big gate before this one. Check the Roadmap tab to see which phase is holding you back.",
-   "steps": ["Finish every other trophy in this guide.", "Watch the platinum unlock automatically once the 54th trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 2, "name": "Just Like Paradise", "description": "Complete Gone Fishing.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 1, "time": "20 minutes",
-   "guide": "This is the opening mission, so you cannot miss it: play 'Gone Fishing' from the start of the game and finish it. It teaches the basic movement, driving and fishing controls, and the trophy pops on the mission-complete screen. If you are replaying, it is the first mission in the story list.",
-   "steps": ["Start the game and play the opening mission 'Gone Fishing'.", "Follow the on-screen prompts through the fishing sequence.", "Finish the mission; the trophy pops at the results screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 3, "name": "Paradise Lost", "description": "Complete Chapter 1.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 1, "time": "3-4 hours",
-   "guide": "Chapter 1 is the first block of story missions. Just keep playing the story in order — every mission in the chapter counts toward it, and the trophy pops when the chapter's final mission ends. There is nothing to grind here; the chapter is linear, so follow the mission markers on the map.",
-   "steps": ["Play the story missions in order.", "Finish the last mission of Chapter 1.", "The trophy pops at the chapter-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 4, "name": "T**s Ass Drug Money", "description": "Complete Chapter 2.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "4-5 hours",
-   "guide": "Chapter 2 continues the story and opens up more of Leonida. Play its missions in order; the trophy is awarded for finishing the chapter, not for any single task inside it. Use the downtime between missions to try activities and pick up collectibles you pass, so the later grind is shorter.",
-   "steps": ["Play the story missions of Chapter 2 in order.", "Finish the chapter's final mission.", "The trophy pops at the chapter-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 5, "name": "Vice City, Baby!", "description": "Complete Chapter 3.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "4-6 hours",
-   "guide": "Chapter 3 takes the story into Vice City itself. As with the earlier chapters, the trophy comes from finishing the chapter, so keep following the story markers. By now the map is largely open — if a mission asks for a specific vehicle or weapon, buy it between missions rather than mid-mission.",
-   "steps": ["Play the story missions of Chapter 3 in order.", "Finish the chapter's final mission.", "The trophy pops at the chapter-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 6, "name": "Top Of The World, Ma", "description": "Complete Chapter 4.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "4-6 hours",
-   "guide": "Chapter 4 is the last full chapter before the finale. Finish its missions in order and the trophy pops at the end of the chapter. Before you push into the final mission, use this chapter to clear side strands and meditation spots, because the finale can lock some open-world access behind it.",
-   "steps": ["Play the story missions of Chapter 4 in order.", "Clear side strands and meditation spots before the finale if you can.", "Finish the chapter's final mission."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 7, "name": "You Gotta Know When to Get Off", "description": "Complete the final mission.", "grade": "gold", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "30-60 minutes",
-   "guide": "This gold trophy is for finishing the game's final mission. There is only one way to get it: play the story through to the end. Make a manual save before you start the finale, stock up on armour and ammo, and take the mission at your own pace — the trophy pops on the mission-complete screen, right before the credits.",
-   "steps": ["Finish Chapters 1-4.", "Save manually, then start the final mission.", "Complete it; the gold trophy pops at the results screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 8, "name": "Trust", "description": "Complete Breakfast Run.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "'Breakfast Run' is a named story mission. It pops when the mission is complete, like every other mission trophy in this list. Follow the mission markers, and if the mission has a driving section, keep a fast car handy before you trigger it.",
-   "steps": ["Reach 'Breakfast Run' in the story.", "Play the mission through to its end.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 9, "name": "Break the Bank", "description": "Complete The Cartel Heist.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "30-45 minutes",
-   "guide": "'The Cartel Heist' is a big set-piece mission. It pops on completion, so the only requirement is to finish it. Heist missions usually have a setup phase first — do the setup, then run the heist itself, and keep moving during the escape so the wanted level does not catch up with you.",
-   "steps": ["Reach 'The Cartel Heist' in the story.", "Complete any setup the mission asks for, then run the heist.", "Escape and finish the mission for the trophy."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 10, "name": "Family Matters", "description": "Complete Child's Play.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "'Child's Play' is a named story mission. Play it through to the end and the trophy pops on the mission-complete screen. There is no extra objective to chase — finishing the mission is the whole requirement.",
-   "steps": ["Reach 'Child's Play' in the story.", "Play the mission through to its end.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 11, "name": "DWNFALL", "description": "Complete Headliners.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "'Headliners' is a named story mission. Finish it and the trophy pops on the mission-complete screen. If the mission involves a performance or a crowd, follow the prompts in order rather than rushing — the mission only fails if you ignore them.",
-   "steps": ["Reach 'Headliners' in the story.", "Play the mission through to its end.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 12, "name": "Hi-Jacked", "description": "Complete VCIA Takedown.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "30-45 minutes",
-   "guide": "'VCIA Takedown' is a named story mission set around the airport. Finish it and the trophy pops on the mission-complete screen. Airport missions tend to have heavy wanted levels, so use cover, keep a fast getaway vehicle nearby, and do not linger in the open after the objective is done.",
-   "steps": ["Reach 'VCIA Takedown' in the story.", "Play the mission through to its end.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 13, "name": "Snow Storm", "description": "Complete Operation Savage Glory.", "grade": "bronze", "hidden": true, "kind": "story", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "30-45 minutes",
-   "guide": "'Operation Savage Glory' is a named story mission. Finish it and the trophy pops on the mission-complete screen. The name suggests a large combat section, so go in with full armour, a good rifle, and a vehicle you can leave in quickly.",
-   "steps": ["Reach 'Operation Savage Glory' in the story.", "Play the mission through to its end.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 14, "name": "A Long Road", "description": "Attain 100% Completion.", "grade": "gold", "hidden": false, "kind": "completion", "missable": false, "target": 100, "targetLabel": "100% completion", "difficulty": 5, "time": "60+ hours",
-   "guide": "This gold trophy is the long grind behind the platinum: reach 100% completion on the in-game stats page. That means the full story, every side strand, all collectibles, activities and the counts in this guide. Track your percentage in the pause menu as you go, and use this guide's checklist to find the categories that are still short — the last few percent are almost always collectibles.",
-   "steps": ["Finish the story and every side strand.", "Complete all collectibles, activities and counted tasks in this guide.", "Check the in-game completion percentage; at 100% the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  }
-,
-  {
-   "id": 15, "name": "Cunning Stunts", "description": "Complete 250 Stunts.", "grade": "silver", "hidden": false, "kind": "activities", "missable": false, "target": 250, "targetLabel": "250 stunts", "difficulty": 4, "time": "3-5 hours",
-   "guide": "PSN tracks 250 stunts, so this silver is a grind, not a skill test. Stunts are the jumps, near-misses, drifts and airtime the game counts as you drive — the counter ticks up during normal play, especially if you drive fast and take ramps. The fastest route is to repeat a good jump spot: a long straight with a ramp, a fast car, and a clean landing. Do a few stunts between missions from the start and the total will be close to 250 by the end of the story.",
-   "steps": ["Drive fast and take jumps, ramps and near-misses whenever you travel.", "Repeat a reliable jump spot for clean landings.", "Watch the PSN counter; at 250 the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 16, "name": "Master of None", "description": "Try each type of activity once.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": 9, "targetLabel": "9 activity types", "difficulty": 2, "time": "1-2 hours",
-   "guide": "PSN tracks 9 activity types, and you only need to try each one once — no wins required. Work through the activities list in the pause menu: fishing, races, the shooting range, drone races, arcade games, bowling, meditation, hunting and one more of the open-world pastimes. One attempt at each is enough, so this is a quick tour rather than a grind.",
-   "steps": ["Open the activities list in the pause menu.", "Try each of the 9 activity types once.", "The trophy pops when the ninth type is tried."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 17, "name": "The Shootist", "description": "Earn a gold medal in all Shooting Range challenges.", "grade": "silver", "hidden": false, "kind": "activities", "missable": false, "target": 42, "targetLabel": "42 gold medals", "difficulty": 4, "time": "2-4 hours",
-   "guide": "PSN tracks 42 Shooting Range challenges, and this silver needs a gold medal in every one of them. Go weapon by weapon: learn each challenge's target pattern first with a slow run, then push for gold. Use the weapon the challenge is built for, aim for headshots where the scoring rewards them, and replay a challenge immediately while the pattern is fresh in your head.",
-   "steps": ["Visit a Shooting Range and open the challenges list.", "Work through the 42 challenges weapon by weapon.", "Earn gold in each; the trophy pops on the 42nd gold."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 18, "name": "Top Fun", "description": "Win a Top Fun Drone Race at every location.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": 14, "targetLabel": "14 locations", "difficulty": 3, "time": "1-2 hours",
-   "guide": "PSN tracks 14 drone-race locations, and you need a win at each one. Drone races are short, so the challenge is learning each course's corners rather than raw speed. Fly the practice line once, then race: cut corners where the gates allow it, and do not crash on the final stretch — a crash costs more time than a cautious line saves.",
-   "steps": ["Find a Top Fun drone race location.", "Win the race there, then move to the next location.", "Win at all 14 locations for the trophy."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 19, "name": "Earn Cash, Not Kudos", "description": "Win 20 different races.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": 20, "targetLabel": "20 different races", "difficulty": 3, "time": "2-3 hours",
-   "guide": "PSN tracks 20 different races, so repeats do not count — you need 20 distinct race events won. Pick the easiest class first and a car you know, and work through the race list in the pause menu, ticking each one off. Short city circuits are the fastest wins; save the long highway races for when your car is upgraded.",
-   "steps": ["Open the races list and pick an unwon race.", "Win it with a car suited to that race type.", "Win 20 different races; the trophy pops on the 20th."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 20, "name": "Baited My Tackle", "description": "Beat Cal in a fishing challenge.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "Cal is the fishing rival, and this trophy is for beating him in a fishing challenge. Enter a fishing challenge where Cal is the opponent, then out-fish him: cast where the fish are showing, keep the line tension in the safe zone, and reel steadily instead of yanking. One win is all it takes.",
-   "steps": ["Go fishing and find a challenge against Cal.", "Out-fish him by keeping tension steady and reeling smoothly.", "Win the challenge for the trophy."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 21, "name": "Stick Fiddler", "description": "Complete an arcade game.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": null, "targetLabel": null, "difficulty": 1, "time": "10-20 minutes",
-   "guide": "Find an arcade and finish any one arcade game to completion. It does not matter which game you pick or how high you score — finishing it is the requirement. Pick the shortest game on the list if you want this done fast, and play it through to its end screen.",
-   "steps": ["Find an arcade in Leonida.", "Start any arcade game.", "Play it through to its end screen; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 22, "name": "Road to Rehabilitation", "description": "Complete the final mission for Andy.", "grade": "bronze", "hidden": true, "kind": "side", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "Andy is one of the side characters with a mission strand. Play his missions in order until his final one, then complete it — the trophy pops on the mission-complete screen. Side strands unlock as the story progresses, so if Andy has no mission available, push the story forward a little and check back.",
-   "steps": ["Play Andy's mission strand in order.", "Reach and complete his final mission.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 23, "name": "This Was No Boat Accident", "description": "Complete the final mission for Kenton.", "grade": "bronze", "hidden": true, "kind": "side", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "Kenton is one of the side characters with a mission strand. Play his missions in order until his final one, then complete it — the trophy pops on the mission-complete screen. If his marker is not on the map, advance the story; side strands open up chapter by chapter.",
-   "steps": ["Play Kenton's mission strand in order.", "Reach and complete his final mission.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 24, "name": "The Lone Rider", "description": "Complete the final mission for Billy.", "grade": "bronze", "hidden": true, "kind": "side", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "Billy is one of the side characters with a mission strand. Play his missions in order until his final one, then complete it — the trophy pops on the mission-complete screen. His strand is bike-flavoured, so keep a good motorcycle handy for his missions.",
-   "steps": ["Play Billy's mission strand in order.", "Reach and complete his final mission.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 25, "name": "Strangers & Freaks", "description": "Complete 8 mission strands for strangers across the state of Leonida.", "grade": "silver", "hidden": false, "kind": "side", "missable": false, "target": 8, "targetLabel": "8 stranger strands", "difficulty": 3, "time": "3-4 hours",
-   "guide": "PSN tracks 8 stranger mission strands, and this silver needs all eight finished. Strangers appear as '?' markers across Leonida — talk to them, play their strand through, and move on to the next. There are more than eight strangers in the state, so you can skip any strand you dislike and finish eight others instead.",
-   "steps": ["Find '?' stranger markers across Leonida.", "Complete a stranger's full mission strand.", "Finish 8 strands; the trophy pops on the eighth."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 26, "name": "Supply & Demand", "description": "Complete the final mission for Randy.", "grade": "bronze", "hidden": true, "kind": "side", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "Randy is one of the side characters with a mission strand. Play his missions in order until his final one, then complete it — the trophy pops on the mission-complete screen. His missions revolve around supply runs, so a fast car with good handling helps.",
-   "steps": ["Play Randy's mission strand in order.", "Reach and complete his final mission.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 27, "name": "Spin On This!", "description": "Complete the final mission for Tyrone.", "grade": "bronze", "hidden": true, "kind": "side", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "20-30 minutes",
-   "guide": "Tyrone is one of the side characters with a mission strand. Play his missions in order until his final one, then complete it — the trophy pops on the mission-complete screen. If his marker is not showing, advance the story a mission or two and check the map again.",
-   "steps": ["Play Tyrone's mission strand in order.", "Reach and complete his final mission.", "The trophy pops at the mission-complete screen."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 28, "name": "Positive Mental Attitude", "description": "Meditate at every spot across Leonida.", "grade": "bronze", "hidden": false, "kind": "collectibles", "missable": true, "target": 18, "targetLabel": "18 meditation spots", "difficulty": 2, "time": "1-2 hours",
-   "guide": "PSN tracks 18 meditation spots, and this is the ONE trophy in the game to watch for missing: meditation spots are scattered across Leonida, and the safest plan is to meditate at every spot you pass while you explore, well before the final mission. Do them as you go — start in Chapter 1 and clear each area's spots before you move on. The meditation prompt appears when you stand on a spot, so walk the scenic viewpoints and quiet corners, not just the roads.",
-   "steps": ["Meditate at every spot you find while exploring, starting in Chapter 1.", "Clear each area's spots before moving on.", "Finish all 18 spots before the final mission; the trophy pops on the 18th."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 29, "name": "Fair Game", "description": "Hunt a unique animal for Bret.", "grade": "bronze", "hidden": false, "kind": "collectibles", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "30-60 minutes",
-   "guide": "Bret asks you to hunt a unique animal. Take the hunt when it is offered, track the animal to its area, and take the shot cleanly — a scoped rifle and patience beat rushing in. The trophy pops when the hunt is complete and you report back to Bret.",
-   "steps": ["Take Bret's hunt when it is offered.", "Track the unique animal to its area.", "Take it down cleanly and report back to Bret."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 30, "name": "Don't Touch My Deck", "description": "Complete 3 Collectible Card sets.", "grade": "silver", "hidden": false, "kind": "collectibles", "missable": false, "target": 3, "targetLabel": "3 card sets", "difficulty": 3, "time": "2-3 hours",
-   "guide": "PSN tracks 3 collectible card sets, and this silver needs three full sets. Cards are hidden around Leonida — in shops, on rooftops, in out-of-the-way corners. Pick up every card you see while exploring, and use the in-game collection menu to see which sets are one or two cards short, then hunt those specifically.",
-   "steps": ["Pick up collectible cards wherever you find them.", "Check the collection menu for sets that are nearly complete.", "Complete 3 full sets; the trophy pops on the third."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 31, "name": "You WAiNKer!", "description": "WAiNK It at 100 locations.", "grade": "silver", "hidden": false, "kind": "collectibles", "missable": false, "target": 100, "targetLabel": "100 locations", "difficulty": 3, "time": "2-4 hours",
-   "guide": "PSN tracks 100 WAiNK It locations — the photo-spot activity. Open the WAiNK app, find a marked location, frame the shot the app asks for and take it. Each location counts once, so work area by area and clear the map's marked spots as you explore; the app shows which locations you have already done.",
-   "steps": ["Open the WAiNK app and pick a marked location.", "Frame and take the photo it asks for.", "Do this at 100 locations; the trophy pops on the 100th."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 32, "name": "One Last Thing", "description": "Complete 50 Challenges.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": 50, "targetLabel": "50 challenges", "difficulty": 3, "time": "2-4 hours",
-   "guide": "PSN tracks 50 challenges, and they stack up from everything else you do: stunts, races, hunting, driving, combat. Open the challenges list in the pause menu and chase the nearly-done ones first — a challenge at 48/50 is a faster trophy than a new one at 0/50. By the time the story and activities are done, you will be most of the way there.",
-   "steps": ["Open the challenges list in the pause menu.", "Finish the challenges closest to completion first.", "Complete 50 challenges; the trophy pops on the 50th."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 33, "name": "Hot Together", "description": "Lose a 4 star Wanted Level with your partner and escape the heat.", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "15-30 minutes",
-   "guide": "Get a 4-star wanted level while your partner is with you, then lose it and escape. The easy way: cause trouble in a quiet area until the fourth star appears, then drive — not on foot — into the countryside or through tunnels, and stay out of the police sight cones until the stars clear. Doing it with your partner beside you is the whole requirement, so trigger it during a two-person free-roam session.",
-   "steps": ["Play in free roam with your partner beside you.", "Raise your wanted level to 4 stars.", "Lose the cops and escape; the trophy pops when the stars clear."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 34, "name": "Retail Therapy", "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "15-30 minutes",
-   "guide": "Rob three shops in a row with your partner, without ever losing your wanted level between them — the chain breaks if the stars clear. Pick three shops close together on a quiet street, hit them one after another, and keep moving: the wanted level must stay on the whole time. A fast getaway car parked outside the third shop makes the escape easy.",
-   "steps": ["Find three shops close together, with your partner beside you.", "Rob the first shop, then the second, then the third — without losing the wanted level.", "The trophy pops after the third robbery."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 35, "name": "Whip It Good", "description": "Discover 100 vehicles.", "grade": "bronze", "hidden": false, "kind": "collectibles", "missable": false, "target": 100, "targetLabel": "100 vehicles", "difficulty": 2, "time": "2-3 hours",
-   "guide": "PSN tracks 100 vehicles to discover — just get in or drive a vehicle you have never used before and it counts. The counter climbs naturally as you play, since Leonida is full of different cars, bikes, boats and trucks. To finish it off, tour the rich neighbourhoods, the docks and the airport car parks, where the rare models spawn.",
-   "steps": ["Drive or enter vehicles you have never used before.", "Tour car parks, docks and rich neighbourhoods for rare models.", "Discover 100 vehicles; the trophy pops on the 100th."],
-   "sources": ["Exophase", "PSNProfiles"]
-  }
-,
-  {
-   "id": 36, "name": "Gunslinger", "description": "Take down 5 enemies in a single use of Combat Focus.", "grade": "bronze", "hidden": false, "kind": "combat", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "15-30 minutes",
-   "guide": "Combat Focus slows time — trigger it when five or more enemies are in front of you, then take them down before it ends. The easiest spot is a mission or gang hideout with a group clustered together: wait until they bunch up, trigger Combat Focus, and work left to right. A shotgun or SMG at close range clears five fast.",
-   "steps": ["Find a fight with five or more enemies grouped together.", "Trigger Combat Focus.", "Take down 5 enemies before it ends; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 37, "name": "Catch Me If You Can", "description": "Make an unscheduled departure at VCIA.", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "10-20 minutes",
-   "guide": "VCIA is the airport, and an 'unscheduled departure' means leaving it in a vehicle that was not supposed to leave — steal a plane or a service vehicle and take off from the runway. Get onto the airfield, grab a plane, line up on a runway and take off; the trophy pops once you are airborne and clear of the airport.",
-   "steps": ["Get into VCIA airport.", "Steal a plane on the airfield.", "Take off from a runway; the trophy pops once airborne."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 38, "name": "Challenging Tank", "description": "Kinda hot in these Rhinos.", "grade": "bronze", "hidden": true, "kind": "combat", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "20-40 minutes",
-   "guide": "Rhinos are the tanks, and this trophy is about dealing with them — the description's joke is the clue. Raise your wanted level to the point Rhinos roll in, then take one down with sticky explosives or a rocket launcher, or steal one and go for a drive. Either way, the trophy is tied to the Rhino encounter, so get the wanted level high and be ready.",
-   "steps": ["Raise your wanted level until a Rhino tank is sent in.", "Take it down with explosives or a rocket launcher.", "The trophy pops on the Rhino encounter."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 39, "name": "Sneakthief", "description": "Rob a jewelry store without being detected.", "grade": "bronze", "hidden": true, "kind": "combat", "missable": false, "target": null, "targetLabel": null, "difficulty": 3, "time": "15-30 minutes",
-   "guide": "Pick a jewelry store, go in quiet, and get out without any alarm or detection. That means no smashing the front window in view of the clerk, no camera spotting you, and no wanted level at all. Go at night when the street is quiet, keep your weapon holstered until you are inside, take the goods and walk out calmly.",
-   "steps": ["Pick a jewelry store and go at a quiet hour.", "Rob it without tripping any alarm or being seen.", "Leave with no wanted level; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 40, "name": "Maximum Withdrawal", "description": "Rob 5 Bank Vaults and escape.", "grade": "silver", "hidden": false, "kind": "combat", "missable": false, "target": 5, "targetLabel": "5 bank vaults", "difficulty": 4, "time": "1-2 hours",
-   "guide": "PSN tracks 5 bank vaults, and this silver needs all five robbed with a clean escape each time. Plan each vault like a mini-heist: scope the bank, hit the vault, and have a fast car waiting outside before you go in. Five escapes in a row is the hard part — do not rush between vaults, and let your wanted level clear fully before the next one.",
-   "steps": ["Scope a bank and park a fast getaway car outside.", "Rob its vault.", "Escape cleanly, then repeat for 5 vaults total."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 41, "name": "A Classic Blitz Play", "description": "Rob an Armored Truck and escape.", "grade": "bronze", "hidden": false, "kind": "combat", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "15-30 minutes",
-   "guide": "Armored trucks drive set routes around Leonida. Stop one — block the road with your car or hit it with explosives — grab the cash from the back, and escape before the police close in. One successful robbery and escape is all it takes.",
-   "steps": ["Find an armored truck on its route.", "Stop it and take the cash from the back.", "Escape the police; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 42, "name": "The Goodtime State", "description": "Explore all of Leonida.", "grade": "bronze", "hidden": false, "kind": "collectibles", "missable": false, "target": 52, "targetLabel": "52 areas", "difficulty": 3, "time": "2-4 hours",
-   "guide": "PSN tracks 52 areas of Leonida, and you need to visit every one. The in-game map shows area names as you enter them, so the method is a road trip: drive the highways and back roads, and tick off each area name as it appears. The last few areas are usually small islands, swamp corners and mountain tops — check the map for unnamed gaps and drive into them.",
-   "steps": ["Drive through Leonida, watching for new area names.", "Cover highways, back roads and the coast.", "Visit all 52 areas; the trophy pops on the last one."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 43, "name": "Pest Control", "description": "Rob an Illegal Operation belonging to each gang.", "grade": "bronze", "hidden": false, "kind": "combat", "missable": false, "target": 9, "targetLabel": "9 gangs", "difficulty": 3, "time": "1-2 hours",
-   "guide": "PSN tracks 9 gangs, and you need to rob an illegal operation belonging to each one. Illegal operations are marked on the map once you discover them — hit one per gang, take the goods and get out. Work through the gang list in the pause menu so you can see which gangs are still missing.",
-   "steps": ["Find an illegal operation on the map.", "Rob it and escape.", "Rob one operation for each of the 9 gangs."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 44, "name": "In The Beginning…", "description": "Enjoy a cocktail with a view on Ocean Beach.", "grade": "bronze", "hidden": false, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 1, "time": "10 minutes",
-   "guide": "Go to Ocean Beach, find a bar or cocktail spot with a sea view, and order a cocktail. Sit with the view for a moment — the trophy pops once the drink is served and you are looking out over the ocean. It is a pure flavour trophy, so do it early for a breather between missions.",
-   "steps": ["Go to Ocean Beach.", "Find a bar with a sea view and order a cocktail.", "The trophy pops once the drink is served."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 45, "name": "Capital Offense", "description": "Smash your way out of a vehicle showroom in classic style.", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "10-20 minutes",
-   "guide": "Drive into a vehicle showroom and smash your way back out through the glass in classic style. Pick a showroom with a big front window, drive a sturdy car straight in, then floor it back out through the glass — the trophy pops on the exit. Pick a quiet hour so the police do not complicate the escape.",
-   "steps": ["Find a vehicle showroom with a big glass front.", "Drive in, then smash back out through the glass.", "The trophy pops on the exit."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 46, "name": "Let’s Go Bowling", "description": "Follow-through at the Kolt & Associates' bowling alley.", "grade": "bronze", "hidden": false, "kind": "activities", "missable": false, "target": null, "targetLabel": null, "difficulty": 1, "time": "10-20 minutes",
-   "guide": "Go to the Kolt & Associates bowling alley and play a game through — 'follow-through' is the clue, so finish the game properly rather than quitting halfway. Aim steadily, follow through on the throw, and play all the frames to the end; the trophy pops at the end of the game.",
-   "steps": ["Go to the Kolt & Associates bowling alley.", "Play a full game of bowling.", "Finish all frames; the trophy pops at the end."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 47, "name": "Personal Best", "description": "A partnership with mass appeal.", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "30-60 minutes",
-   "guide": "This one is cryptic on purpose — 'a partnership with mass appeal' points to doing something with your partner that draws a crowd. Play co-op moments with your partner in busy public places and the trophy will come from one of them; if it has not popped by the end of the story, revisit the busy hotspots (beach, boardwalk, stadium) with your partner and try the public activities there.",
-   "steps": ["Play public activities with your partner in busy places.", "Try the beach, boardwalk and stadium hotspots.", "The trophy pops on the partnership moment."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 48, "name": "Actions Speak Louder", "description": "Choices made (for better or worse).", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": 500, "targetLabel": "500 choices", "difficulty": 4, "time": "5+ hours",
-   "guide": "PSN tracks 500 choices — every decision the game counts, from dialogue picks to approach choices in missions and activities. There is no shortcut: make choices constantly, in missions and in free roam, and the counter climbs. The count is cumulative across the whole playthrough, so by the time you have done the story, the side strands and the activities, you will be close.",
-   "steps": ["Make choices in every mission and activity — dialogue, approaches, routes.", "Keep playing; the counter is cumulative.", "At 500 choices the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 49, "name": "Bad Luck, I Guess", "description": "Second time's the charm.", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 1, "time": "10 minutes",
-   "guide": "Fail something once, then succeed on the second try — that is the whole trophy. The easiest route is a mission or activity you can retry: fail it deliberately the first time, then pass it on the immediate retry and the trophy pops. Do not worry about failing — the game counts the retry, not the failure.",
-   "steps": ["Fail a mission or activity once.", "Retry it immediately.", "Pass on the second try; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 50, "name": "The Truth Is Out There", "description": "What the hell just happened?", "grade": "bronze", "hidden": true, "kind": "open-world", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "30-60 minutes",
-   "guide": "Something strange is out there in Leonida, and this trophy is for witnessing it. Strange events are the game's easter eggs — odd lights, odd sounds, odd encounters in remote places. Explore the remote corners (swamps, desert roads, mountaintops) at night and the event will find you; the trophy pops when you witness it.",
-   "steps": ["Explore remote corners of Leonida, especially at night.", "Look for strange lights, sounds or encounters.", "Witness the strange event; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 51, "name": "Ten Pin", "description": "Bowl 'em over with a melee drive-by.", "grade": "bronze", "hidden": true, "kind": "combat", "missable": false, "target": null, "targetLabel": null, "difficulty": 2, "time": "10-20 minutes",
-   "guide": "A 'melee drive-by' means hitting someone with a melee weapon from a moving vehicle — drive past a pedestrian and swing as you pass, bowling them over. Find a quiet street with pedestrians, get up a little speed, and swing the bat as you pass. One clean hit is all it takes.",
-   "steps": ["Get a melee weapon and a vehicle.", "Drive past a pedestrian on a quiet street.", "Swing the melee weapon as you pass; the trophy pops on the hit."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 52, "name": "Dime on the Dollar", "description": "Earn $250,000 laundering Marked Bills through your contacts.", "grade": "bronze", "hidden": false, "kind": "open-world", "missable": false, "target": 250000, "targetLabel": "$250,000 laundered", "difficulty": 3, "time": "3-5 hours",
-   "guide": "PSN tracks $250,000 laundered. Marked Bills come from robberies and heists — take them to your contacts to launder them into clean cash. Every robbery in this guide earns Marked Bills, so launder after each one instead of letting them pile up, and the total will reach $250,000 by the time the combat and heist trophies are done.",
-   "steps": ["Earn Marked Bills from robberies and heists.", "Launder them through your contacts.", "Reach $250,000 laundered; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 53, "name": "Treat Yo Self", "description": "Spend $100,000 across all shops.", "grade": "bronze", "hidden": false, "kind": "open-world", "missable": false, "target": 100000, "targetLabel": "$100,000 spent", "difficulty": 2, "time": "1-2 hours",
-   "guide": "PSN tracks $100,000 spent across all shops — clothes, weapons, cars, food, anything you buy counts. Spend as you play rather than hoarding cash: buy the weapons and armour you need, the clothes you like, and a car or two. By the end of the story you will be most of the way there; top it up with a vehicle purchase if you are short.",
-   "steps": ["Spend money in shops as you play — weapons, clothes, cars.", "Check the PSN counter in the pause menu.", "Reach $100,000 spent; the trophy pops."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 54, "name": "Little Boxes", "description": "Purchase all garage properties.", "grade": "bronze", "hidden": false, "kind": "collectibles", "missable": false, "target": 8, "targetLabel": "8 garage properties", "difficulty": 2, "time": "1-2 hours",
-   "guide": "PSN tracks 8 garage properties, and you need to buy them all. Garages are sold across Leonida — check the property listings, visit each one, and buy it. They are also useful: each garage stores vehicles for the 'Whip It Good' and 'On the Spot' trophies, so buy them as you find them.",
-   "steps": ["Check property listings for garages for sale.", "Visit and purchase each garage.", "Buy all 8; the trophy pops on the last one."],
-   "sources": ["Exophase", "PSNProfiles"]
-  },
-  {
-   "id": 55, "name": "On the Spot", "description": "Register 10 vehicles to the Scooter Bros app.", "grade": "bronze", "hidden": false, "kind": "collectibles", "missable": false, "target": 10, "targetLabel": "10 vehicles registered", "difficulty": 2, "time": "30-60 minutes",
-   "guide": "PSN tracks 10 vehicles registered to the Scooter Bros app. Open the app, register a vehicle you own or have just found, and repeat for ten different vehicles. The easiest ten are the cars already in your garages — register them first, then find a few more on the street.",
-   "steps": ["Open the Scooter Bros app.", "Register a vehicle.", "Register 10 different vehicles; the trophy pops on the 10th."],
-   "sources": ["Exophase", "PSNProfiles"]
-  }
- ]
+  "game": "Grand Theft Auto VI",
+  "platform": "PlayStation 5",
+  "listNote": "Names, descriptions and grades are the official PlayStation 5 list as published on Exophase and PSNProfiles, which agree on all 55. Hidden flags follow a documented rule (see the About page): the live pages do not expose a hidden marker per trophy. PSN progress targets are from PSNProfiles. Guides are written in our own words for this entry; sources are cited beside each guide, never copied.",
+  "trophies": [
+    {
+      "id": 1,
+      "name": "Vice Got a Price!",
+      "description": "Congratulations! You're a Leonida Legend.",
+      "grade": "platinum",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 5,
+      "time": "200-300 hours",
+      "guide": "The platinum unlocks itself the moment you earn the other 54 trophies. There is no separate task: work the roadmap in order — story, strangers, activities, collectibles, crime, then the long grind — and this pops last. The longest poles are 100% Completion, 250 stunts and gold in all 42 Shooting Range challenges, so start those counters early and let them tick up while you do everything else.",
+      "steps": [
+        "Finish the story and all stranger missions.",
+        "Complete the activities, collectibles and crime trophies.",
+        "Attain 100% Completion for A Long Road.",
+        "Vice Got a Price! unlocks automatically."
+      ],
+      "tips": "Check the Roadmap tab: it orders the whole list into six phases so nothing is left to the end. Typical total time is about 250 hours.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — official list", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 2,
+      "name": "Just Like Paradise",
+      "description": "Complete Gone Fishing.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Gone Fishing is an early story mission — the first fishing trip, and the mission that teaches you how fishing works. Play the mission through to its end and the trophy pops with the mission-complete screen. It cannot be missed: story missions can be replayed, and this one comes naturally in the opening hours.",
+      "steps": [
+        "Play the story until the Gone Fishing mission opens.",
+        "Follow the mission prompts and finish the fishing trip.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "Pay attention during this mission: fishing is one of the 9 activity types, and beating Cal in a fishing challenge later earns Baited My Tackle.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 3,
+      "name": "Paradise Lost",
+      "description": "Complete Chapter 1.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Finish every mission in Chapter 1. Chapter trophies unlock automatically at the chapter's end — there is nothing extra to find or do. If you are unsure whether a chapter is finished, the story progress screen shows which missions remain.",
+      "steps": [
+        "Play through all of Chapter 1's missions in order.",
+        "The trophy unlocks at the chapter's closing scene."
+      ],
+      "tips": "Meditate at any spot you pass in Chapter 1 — the missable Positive Mental Attitude trophy needs every spot, and one is tied to the story.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 4,
+      "name": "T**s Ass Drug Money",
+      "description": "Complete Chapter 2.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Finish every mission in Chapter 2. Like the other chapter trophies, it unlocks automatically when the chapter closes. The name is shown on PlayStation exactly as written here, asterisks included.",
+      "steps": [
+        "Play through all of Chapter 2's missions in order.",
+        "The trophy unlocks at the chapter's closing scene."
+      ],
+      "tips": "Chapter 2 opens up more of the map — use the new areas to start the open-world counters (vehicles, WAiNK scans) in passing.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 5,
+      "name": "Vice City, Baby!",
+      "description": "Complete Chapter 3.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Finish every mission in Chapter 3. The trophy unlocks automatically at the chapter's end. By now the map is largely open, so it is a good moment to knock out a few activity trophies between story missions rather than leaving them all for after the finale.",
+      "steps": [
+        "Play through all of Chapter 3's missions in order.",
+        "The trophy unlocks at the chapter's closing scene."
+      ],
+      "tips": "Try a race, a stunt and the shooting range between missions — they count toward Master of None and the long grind.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 6,
+      "name": "Top Of The World, Ma",
+      "description": "Complete Chapter 4.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Finish every mission in Chapter 4, the last full chapter before the finale. The trophy unlocks automatically at the chapter's end. After this, only the final mission stands between you and the gold story trophy.",
+      "steps": [
+        "Play through all of Chapter 4's missions in order.",
+        "The trophy unlocks at the chapter's closing scene."
+      ],
+      "tips": "Before the finale, do a sweep of meditation spots you have passed — the missable trophy needs all 18, and one spot is tied to the story.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 7,
+      "name": "You Gotta Know When to Get Off",
+      "description": "Complete the final mission.",
+      "grade": "gold",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Story",
+      "guide": "Complete the final story mission. This is the gold story trophy and the last of the 12 story trophies. The finale is a full mission like any other — follow the objectives, and the trophy pops at the credits. After it, the whole map stays open for everything else on the list.",
+      "steps": [
+        "Finish Chapters 1-4.",
+        "Play the final mission to its end.",
+        "The trophy unlocks with the mission-complete screen."
+      ],
+      "tips": "Do not rush past the finale: free roam after the story is where most of the remaining trophies are earned.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 8,
+      "name": "Trust",
+      "description": "Complete Breakfast Run.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Breakfast Run is a story mission — play it through to the end and the trophy unlocks with the mission-complete screen. Named story missions like this one cannot be missed: they are part of the main path, and the mission list shows them in order.",
+      "steps": [
+        "Play the story until Breakfast Run opens.",
+        "Complete the mission's objectives.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "The official description names the mission, so there is no searching: it appears in the story flow.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 9,
+      "name": "Break the Bank",
+      "description": "Complete The Cartel Heist.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Story",
+      "guide": "The Cartel Heist is a story heist mission — play it through to the end and the trophy unlocks with the mission-complete screen. Heist missions are longer than ordinary ones and usually have a setup and an execution; both count as part of the same mission, so stay with it until the debrief.",
+      "steps": [
+        "Play the story until The Cartel Heist opens.",
+        "Complete the setup and the heist itself.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "Heist missions are good practice for the standalone robbery trophies later — the same stealth and driving skills apply.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 10,
+      "name": "Family Matters",
+      "description": "Complete Child's Play.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Story",
+      "guide": "Child's Play is a story mission — play it through to the end and the trophy unlocks with the mission-complete screen. It is on the main path, so it cannot be missed or locked out.",
+      "steps": [
+        "Play the story until Child's Play opens.",
+        "Complete the mission's objectives.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "The official description names the mission directly, so just follow the story order.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 11,
+      "name": "DWNFALL",
+      "description": "Complete Headliners.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Story",
+      "guide": "Headliners is a story mission — play it through to the end and the trophy unlocks with the mission-complete screen. It is on the main path, so it cannot be missed. The stylised name is the mission's own title.",
+      "steps": [
+        "Play the story until Headliners opens.",
+        "Complete the mission's objectives.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "Story missions can be replayed after the credits, so even a failed attempt costs nothing but time.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 12,
+      "name": "Hi-Jacked",
+      "description": "Complete VCIA Takedown.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Story",
+      "guide": "VCIA Takedown is a story mission set around the airport — play it through to the end and the trophy unlocks with the mission-complete screen. It is on the main path, so it cannot be missed.",
+      "steps": [
+        "Play the story until VCIA Takedown opens.",
+        "Complete the mission's objectives.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "The airport area matters again later: Catch Me If You Can asks for an unscheduled departure from VCIA.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 13,
+      "name": "Snow Storm",
+      "description": "Complete Operation Savage Glory.",
+      "grade": "bronze",
+      "kind": "story",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Story",
+      "guide": "Operation Savage Glory is a story mission — play it through to the end and the trophy unlocks with the mission-complete screen. It is the last of the named story-mission trophies before the finale, and it cannot be missed.",
+      "steps": [
+        "Play the story until Operation Savage Glory opens.",
+        "Complete the mission's objectives.",
+        "The trophy unlocks when the mission completes."
+      ],
+      "tips": "With the story trophies done, the roadmap's phase 2 — strangers and side stories — is the natural next step.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 14,
+      "name": "A Long Road",
+      "description": "Attain 100% Completion.",
+      "grade": "gold",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": "100%",
+      "difficulty": 5,
+      "time": "200-300 hours",
+      "guide": "Reach 100% on the in-game completion checklist (Progress, then Stats). The checklist counts story missions, stranger strands, activities, collectibles and the big counters — 300 of the 397 stunts, 70 of the 80 Challenges, all 42 drone races at the 14 Top Fun locations, and more. It is the longest single trophy on the list and usually the last one before the platinum. Work it in passes: finish the story, then sweep each category, and check the in-game list after every session so you always know what is left.",
+      "steps": [
+        "Finish the story and all stranger missions.",
+        "Open Progress > Stats and read the 100% checklist.",
+        "Clear each category: stunts (300), challenges (70 of 80), drone races (all 42), and the rest.",
+        "The trophy unlocks at 100%."
+      ],
+      "tips": "The standalone trophies ask for less than 100% does — 250 stunts instead of 300, 50 challenges instead of 70 — so keep going after those pop. Expect 200-300 hours in total for the platinum.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (100%)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 15,
+      "name": "Cunning Stunts",
+      "description": "Complete 250 Stunts.",
+      "grade": "silver",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": 250,
+      "difficulty": 4,
+      "time": "15-25 hours",
+      "guide": "Complete any 250 of the 397 stunts in Leonida: stunt jumps, under-the-bridge flights, knife flights and base jumps. The game counts each stunt once, and the in-game stats show your running total. Under-the-bridge flights are the quickest to chain — fly low under bridges in a fast plane or helicopter — while stunt jumps need a fast car and a good run-up. You only need 250 of 397, so skip the ones that fight you; 100% Completion later asks for 300.",
+      "steps": [
+        "Check your stunt total in Progress > Stats.",
+        "Chain under-the-bridge flights for quick completions.",
+        "Add stunt jumps, knife flights and base jumps until the counter hits 250."
+      ],
+      "tips": "Do stunts in passing during the whole playthrough instead of saving all 250 for the end. A helicopter makes bridge flights far easier than a plane.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (250)", "PushSquare — GTA 6 Trophy Guide & Roadmap", "PowerPyx — GTA 6 Trophy Guide"]
+    },
+    {
+      "id": 16,
+      "name": "Master of None",
+      "description": "Try each type of activity once.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": false,
+      "missable": false,
+      "target": "9 types",
+      "difficulty": 1,
+      "time": "2-4 hours",
+      "guide": "Try each of the 9 activity types once: fishing, hunting, golf, shooting range, pool, basketball, a video game, a race and a stunt. You only have to try each one — no wins or scores required. Most players will have done several by accident during the story; check which are left and do one of each. The arcade, the shooting range and the basketball court are all in or near Vice City, so the rest is a short tour.",
+      "steps": [
+        "Open the activities list and see which types you have tried.",
+        "Do one of each missing type: fish, hunt, play golf, shoot at the range, play pool, play basketball, finish an arcade game, race, and land a stunt."
+      ],
+      "tips": "This pairs naturally with the other activity trophies — one fishing trip can count toward the fishing challenge, and one arcade game earns Stick Fiddler.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap", "PowerPyx — GTA 6 Trophy Guide"]
+    },
+    {
+      "id": 17,
+      "name": "The Shootist",
+      "description": "Earn a gold medal in all Shooting Range challenges.",
+      "grade": "silver",
+      "kind": "activities",
+      "hidden": false,
+      "missable": false,
+      "target": 42,
+      "difficulty": 5,
+      "time": "10-20 hours",
+      "guide": "Earn a gold medal in all 42 Shooting Range challenges across the 12 ranges — 6 courses each at the Griffin Shooting Range in Balsero (18 golds) and Rodgers Ranch in Port Gellhorn (24 golds). Each challenge has a score threshold for gold; the game shows it before you start. Learn one weapon at a time, use cover and controlled bursts rather than spraying, and replay a course until gold — silver and bronze do not count. This is one of the two hardest trophies on the list, beside 100% Completion.",
+      "steps": [
+        "Visit both shooting ranges and open the challenge list.",
+        "Learn each course's gold threshold before you shoot.",
+        "Replay courses until all 42 show gold."
+      ],
+      "tips": "Take breaks between courses — accuracy drops fast when you rush. A controller with steady aim settings helps more than a faster trigger finger.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (42)", "PushSquare — GTA 6 Trophy Guide & Roadmap", "PowerPyx — GTA 6 Trophy Guide"]
+    },
+    {
+      "id": 18,
+      "name": "Top Fun",
+      "description": "Win a Top Fun Drone Race at every location.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": false,
+      "missable": false,
+      "target": "14 locations",
+      "difficulty": 3,
+      "time": "4-8 hours",
+      "guide": "Win a Top Fun drone race at every one of the 14 locations. There are 42 races in total (three per location), but the trophy only needs one win at each location — the full 42 are needed for 100% Completion later. Drone races are time trials through rings: learn the course on a slow first run, then race it. Cut corners only where the rings allow it.",
+      "steps": [
+        "Find the Top Fun drone race at each of the 14 locations.",
+        "Win one race at each location.",
+        "Come back for the other two races per location if you are chasing 100%."
+      ],
+      "tips": "One win per location is enough for the trophy, so do not grind all 42 until the 100% phase.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (14)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 19,
+      "name": "Earn Cash, Not Kudos",
+      "description": "Win 20 different races.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": false,
+      "missable": false,
+      "target": 20,
+      "difficulty": 3,
+      "time": "4-8 hours",
+      "guide": "Win 20 different races — each race counts once, so you need 20 distinct events, not 20 wins of the same one. Races are scattered across Leonida in cars, bikes and boats; the race menu shows which you have won. Pick short street races first and learn their corners, then work through the longer ones. A well-upgraded car matters more than perfect driving on the longer circuits.",
+      "steps": [
+        "Open the race list and note which races you have already won.",
+        "Win 20 different races across cars, bikes and boats."
+      ],
+      "tips": "Repeat wins of a race you already won do not count — the word 'different' is the whole trophy. Track it in the race menu.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (20)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 20,
+      "name": "Baited My Tackle",
+      "description": "Beat Cal in a fishing challenge.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "1-2 hours",
+      "guide": "Beat Cal in a fishing challenge. Cal is the fishing rival you meet during the story's fishing trip; after that, fishing challenges against him open at fishing spots. A challenge is a timed catch contest — bigger and rarer fish score more. Use the best bait you have and fish where the water is deep; reeling steadily beats reeling fast.",
+      "steps": [
+        "Finish the story fishing trip to meet Cal.",
+        "Open a fishing challenge against Cal at a fishing spot.",
+        "Out-fish him before the timer ends."
+      ],
+      "tips": "If you lose, you can retry the challenge — losing costs nothing but the entry time.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 21,
+      "name": "Stick Fiddler",
+      "description": "Complete an arcade game.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Under 1 hour",
+      "guide": "Complete one arcade game — play any arcade cabinet through to its end. The arcades are in Vice City; walk up to a cabinet, start the game and finish it. 'Complete' means reaching the end screen, not just starting it.",
+      "steps": [
+        "Find an arcade in Vice City.",
+        "Start any arcade game and play it to completion."
+      ],
+      "tips": "This also counts as one of the 9 activity types for Master of None.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 22,
+      "name": "Road to Rehabilitation",
+      "description": "Complete the final mission for Andy.",
+      "grade": "bronze",
+      "kind": "side",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Side missions",
+      "guide": "Complete Andy's final mission. Andy is one of the strangers — side characters with their own mission strands across Leonida. Meet Andy, play his missions in order, and the trophy unlocks when his last mission completes. Stranger missions are marked on the map once you have met the character, so there is no blind searching.",
+      "steps": [
+        "Meet Andy and start his mission strand.",
+        "Play his missions in order until the final one.",
+        "The trophy unlocks when his final mission completes."
+      ],
+      "tips": "Stranger strands also feed Strangers & Freaks, which needs 8 completed strands — Andy is one of the eight.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 23,
+      "name": "This Was No Boat Accident",
+      "description": "Complete the final mission for Kenton.",
+      "grade": "bronze",
+      "kind": "side",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Side missions",
+      "guide": "Complete Kenton's final mission. Kenton is one of the strangers with a mission strand of his own. Meet him, play his missions in order, and the trophy unlocks when his last mission completes. The strand is marked on the map once you have met him.",
+      "steps": [
+        "Meet Kenton and start his mission strand.",
+        "Play his missions in order until the final one.",
+        "The trophy unlocks when his final mission completes."
+      ],
+      "tips": "Do the stranger strands in any order you like — they are independent of each other and of the story.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 24,
+      "name": "The Lone Rider",
+      "description": "Complete the final mission for Billy.",
+      "grade": "bronze",
+      "kind": "side",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Side missions",
+      "guide": "Complete Billy's final mission. Billy is one of the strangers with a mission strand of his own. Meet him, play his missions in order, and the trophy unlocks when his last mission completes.",
+      "steps": [
+        "Meet Billy and start his mission strand.",
+        "Play his missions in order until the final one.",
+        "The trophy unlocks when his final mission completes."
+      ],
+      "tips": "Billy's strand is one of the eight that count toward Strangers & Freaks.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 25,
+      "name": "Strangers & Freaks",
+      "description": "Complete 8 mission strands for strangers across the state of Leonida.",
+      "grade": "silver",
+      "kind": "side",
+      "hidden": false,
+      "missable": false,
+      "target": 8,
+      "difficulty": 3,
+      "time": "8-15 hours",
+      "guide": "Complete 8 mission strands for strangers across Leonida. Strangers are the side characters marked on the map once you meet them; each has a strand of several missions, and a strand counts when its final mission is done. Andy, Kenton, Billy, Randy and Tyrone each have their own trophy too, so those five strands are the natural core — add any three more strangers to reach eight. The map marks strangers you have met, so work through them one at a time.",
+      "steps": [
+        "Meet strangers across the map — they appear as map markers once met.",
+        "Complete 8 full strands, finishing each one's final mission."
+      ],
+      "tips": "Five of the eight strands also earn their own trophies, so this trophy usually pops while you are finishing those five plus three more.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (8)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 26,
+      "name": "Supply & Demand",
+      "description": "Complete the final mission for Randy.",
+      "grade": "bronze",
+      "kind": "side",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Side missions",
+      "guide": "Complete Randy's final mission. Randy is one of the strangers with a mission strand of his own. Meet him, play his missions in order, and the trophy unlocks when his last mission completes.",
+      "steps": [
+        "Meet Randy and start his mission strand.",
+        "Play his missions in order until the final one.",
+        "The trophy unlocks when his final mission completes."
+      ],
+      "tips": "Randy's strand is one of the eight that count toward Strangers & Freaks.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 27,
+      "name": "Spin On This!",
+      "description": "Complete the final mission for Tyrone.",
+      "grade": "bronze",
+      "kind": "side",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Side missions",
+      "guide": "Complete Tyrone's final mission. Tyrone is one of the strangers with a mission strand of his own. Meet him, play his missions in order, and the trophy unlocks when his last mission completes.",
+      "steps": [
+        "Meet Tyrone and start his mission strand.",
+        "Play his missions in order until the final one.",
+        "The trophy unlocks when his final mission completes."
+      ],
+      "tips": "Tyrone's strand is one of the eight that count toward Strangers & Freaks.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 28,
+      "name": "Positive Mental Attitude",
+      "description": "Meditate at every spot across Leonida.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "hidden": false,
+      "missable": true,
+      "target": "18 spots",
+      "difficulty": 3,
+      "time": "3-6 hours",
+      "guide": "Meditate at all 18 meditation spots across Leonida. THIS IS THE LIST'S ONLY MISSABLE TROPHY: one meditation spot is tied to a story moment, and if you pass it without meditating you cannot go back for it in that playthrough. So meditate at every spot the moment you find it — do not save them for a later sweep. Spots are quiet scenic places: beaches, hilltops, piers and gardens. The game marks a spot once you are near it, and meditating takes only a few seconds each.",
+      "steps": [
+        "From the start of the game, meditate at every spot you pass.",
+        "Check the count in Progress > Stats after each session.",
+        "Finish all 18 spots; the trophy pops at the last one."
+      ],
+      "tips": "This is the one trophy that can force a second playthrough. If you are reading this before starting the game: meditate everywhere, every time. If you already missed the story-tied spot, it is faster to start over than to finish the list and find out at the end.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (18)", "PushSquare — GTA 6 Trophy Guide & Roadmap", "PowerPyx — GTA 6 Trophy Guide"]
+    },
+    {
+      "id": 29,
+      "name": "Fair Game",
+      "description": "Hunt a unique animal for Bret.",
+      "grade": "bronze",
+      "kind": "side",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "1-3 hours",
+      "guide": "Hunt a unique animal for Bret. Bret is a stranger who asks you to hunt specific rare animals — the hunt starts from Bret, not from random wildlife. Meet Bret, take his hunt, and follow the tracking prompts to the animal's area. Unique animals are tougher than ordinary ones: approach quietly, use a scoped rifle, and do not spook it or you will chase it across the map.",
+      "steps": [
+        "Meet Bret and take his hunt.",
+        "Track the unique animal to its area.",
+        "Take it down cleanly and return to Bret."
+      ],
+      "tips": "Hunting counts as one of the 9 activity types for Master of None, so do this before you tick that trophy off.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 30,
+      "name": "Don't Touch My Deck",
+      "description": "Complete 3 Collectible Card sets.",
+      "grade": "silver",
+      "kind": "collectibles",
+      "hidden": false,
+      "missable": false,
+      "target": "3 sets",
+      "difficulty": 3,
+      "time": "6-12 hours",
+      "guide": "Complete 3 full Collectible Card sets. Cards are hidden across Leonida — in shops, houses, vehicles and out in the wilds — and a set completes when you hold every card in it. The collection menu shows which cards you own and which sets are close, so chase the sets with the fewest gaps first. Cards are not marked on the map by default, so use the in-game collection tracker and sweep one region at a time.",
+      "steps": [
+        "Open the card collection and see which sets are closest to complete.",
+        "Sweep one region at a time for the missing cards.",
+        "Complete any 3 full sets."
+      ],
+      "tips": "Do cards alongside the WAiNK scans and the map sweep — the same route covers three trophies at once.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (3)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 31,
+      "name": "You WAiNKer!",
+      "description": "WAiNK It at 100 locations.",
+      "grade": "silver",
+      "kind": "collectibles",
+      "hidden": false,
+      "missable": false,
+      "target": 100,
+      "difficulty": 3,
+      "time": "6-12 hours",
+      "guide": "Use the WAiNK It feature at 100 locations — any mix of Landmarks (31), Curiosities (35), Sculptures (23) and No Flusher tags counts. Open your phone's WAiNK app near a marked spot, scan it, and the counter ticks up. The phone shows which spots in your area are unscanned, so work district by district instead of driving at random. You need 100 of the 89-plus marked locations, so almost every spot counts.",
+      "steps": [
+        "Open the WAiNK app on your phone near a marked location.",
+        "Scan Landmarks, Curiosities, Sculptures and No Flusher tags.",
+        "Reach 100 scanned locations."
+      ],
+      "tips": "Combine this with the map sweep for The Goodtime State and the card hunt — one route, three counters.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (100)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 32,
+      "name": "One Last Thing",
+      "description": "Complete 50 Challenges.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "hidden": false,
+      "missable": false,
+      "target": 50,
+      "difficulty": 3,
+      "time": "10-20 hours",
+      "guide": "Complete 50 of the game's 80 Challenges. Challenges are small goals spread across everything you do — driving, combat, exploration, activities — and the challenge menu shows your progress on each. Many complete themselves while you play the story and the other trophies; the rest are worth doing deliberately in the cleanup phase. You only need 50 of 80, so skip the ones that fight you. Note that 100% Completion later asks for 70.",
+      "steps": [
+        "Open the Challenges menu and see which are already done.",
+        "Let story and activity play finish the easy ones.",
+        "Pick off the remaining easy challenges until the counter hits 50."
+      ],
+      "tips": "Do not chase all 80 now — 70 are needed for 100%, so the last 20 can wait for the final phase.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (50)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 33,
+      "name": "Hot Together",
+      "description": "Lose a 4 star Wanted Level with your partner and escape the heat.",
+      "grade": "bronze",
+      "kind": "heist",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "1-2 hours",
+      "guide": "With your partner beside you, build a 4-star wanted level, then lose the cops and escape. Your partner must be with you when the wanted level drops — if they are not in the car, it does not count. Get 4 stars by committing crimes in a busy area, then drive out of the search circle and stay hidden until the stars clear. A fast car, a quiet hiding spot and patience do the job; do not fight the police, just break line of sight.",
+      "steps": [
+        "Bring your partner with you.",
+        "Build a 4-star wanted level.",
+        "Break line of sight, leave the search area, and stay hidden until the wanted level clears."
+      ],
+      "tips": "Do this at night in a fast car with a full tank. If the wanted level drops to 3 stars, commit one more crime to push it back to 4 before escaping.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 34,
+      "name": "Retail Therapy",
+      "description": "Rob 3 shops back-to-back with your partner without losing your Wanted Level.",
+      "grade": "bronze",
+      "kind": "heist",
+      "hidden": false,
+      "missable": false,
+      "target": 3,
+      "difficulty": 3,
+      "time": "1-2 hours",
+      "guide": "With your partner beside you, rob 3 shops back-to-back without losing your wanted level. The trick is the opposite of Hot Together: you must KEEP the wanted level the whole time. Rob a shop, get in the car with your partner, drive straight to the next shop and rob it before the cops lose you — three in a row, no escape in between. Pick three shops close together on the same street and plan the route before the first robbery.",
+      "steps": [
+        "Bring your partner and pick 3 shops close together.",
+        "Rob the first shop, then drive straight to the second and third.",
+        "Do not lose the wanted level between robberies — the chain breaks if you do."
+      ],
+      "tips": "Use a fast getaway car parked facing the road. If the cops lose you between shops, the chain breaks and you start over.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (3)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 35,
+      "name": "Whip It Good",
+      "description": "Discover 100 vehicles.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "hidden": false,
+      "missable": false,
+      "target": 100,
+      "difficulty": 2,
+      "time": "4-8 hours",
+      "guide": "Discover 100 vehicles. A vehicle counts as discovered when you scan it with WAiNK or drive it — the vehicle menu shows your total. Variety is the key: sports cars, trucks, boats, bikes and planes all count, and rare vehicles in wealthy districts are worth seeking out. Driving different vehicles during normal play discovers most of them; the last few are worth a deliberate tour of car parks, docks and the airport.",
+      "steps": [
+        "Check your vehicle total in the vehicle menu.",
+        "Drive and scan new vehicle types wherever you go.",
+        "Tour car parks, docks and the airport for the rare ones."
+      ],
+      "tips": "A WAiNK scan is enough to discover a vehicle — you do not have to steal or keep it.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (100)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 36,
+      "name": "Gunslinger",
+      "description": "Take down 5 enemies in a single use of Combat Focus.",
+      "grade": "bronze",
+      "kind": "heist",
+      "hidden": false,
+      "missable": false,
+      "target": 5,
+      "difficulty": 3,
+      "time": "1-2 hours",
+      "guide": "Take down 5 enemies in a single use of Combat Focus. Combat Focus is the slow-motion aiming mode — trigger it when enemies are grouped together, not one at a time. The best spot is a gang shootout or a police ambush where enemies cluster: wait until five are in view, trigger Focus, and drop them before the meter runs out. A high-damage weapon helps, since you need five kills inside one Focus window.",
+      "steps": [
+        "Find a fight where enemies cluster together.",
+        "Wait until at least 5 enemies are in view.",
+        "Trigger Combat Focus and take down 5 before it ends."
+      ],
+      "tips": "Do not trigger Focus against a single enemy — the meter is wasted. Let the fight come to you, then strike.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (5)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 37,
+      "name": "Catch Me If You Can",
+      "description": "Make an unscheduled departure at VCIA.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Under 1 hour",
+      "guide": "Make an unscheduled departure at VCIA — the airport. In plain terms: steal a plane at the airport and take off without a flight plan. Drive onto the airfield, take any plane, and get airborne. The trophy pops once you are in the air leaving the airport. Expect police attention on the runway, so take the nearest plane and go — do not linger choosing one.",
+      "steps": [
+        "Go to VCIA airport and get onto the airfield.",
+        "Take any plane.",
+        "Take off — the trophy pops once you are airborne."
+      ],
+      "tips": "A small fast plane is easier to steal than a jet. Enter the airfield from the service road, not the main terminal.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 38,
+      "name": "Challenging Tank",
+      "description": "Kinda hot in these Rhinos.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 3,
+      "time": "1-2 hours",
+      "guide": "The description is a joke, not an instruction: 'Kinda hot in these Rhinos' points at the Rhino tank. Take a Rhino tank for a drive — steal one from a military area or a high-wanted-level police response — and the trophy pops once you are driving it. The official description does not say where to find one, so expect a fight to get it: build a high wanted level near a military zone and the tank comes to you.",
+      "steps": [
+        "Find a Rhino tank — military areas and high wanted levels are where they appear.",
+        "Get inside it.",
+        "Drive it — the trophy pops once you are moving in the tank."
+      ],
+      "tips": "The description gives no location, so this guide does not invent one: military zones and 4-5 star wanted levels are where tanks show up in this series.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 39,
+      "name": "Sneakthief",
+      "description": "Rob a jewelry store without being detected.",
+      "grade": "bronze",
+      "kind": "heist",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 3,
+      "time": "1-2 hours",
+      "guide": "Rob a jewelry store without being detected — no alarms, no witnesses calling the police, no wanted level at all. Go at night, move quietly, take the goods and leave before anyone notices. If an alarm trips, the attempt fails: leave, let the heat die down, and try again. A suppressed weapon and a fast getaway car parked outside make the difference.",
+      "steps": [
+        "Pick a jewelry store and go at night.",
+        "Enter quietly and take the goods without tripping an alarm.",
+        "Leave undetected — the trophy pops once you are clear with no wanted level."
+      ],
+      "tips": "If you are spotted, do not fight it out — leave and retry. Detection, not the robbery, is what fails the trophy.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 40,
+      "name": "Maximum Withdrawal",
+      "description": "Rob 5 Bank Vaults and escape.",
+      "grade": "silver",
+      "kind": "heist",
+      "hidden": false,
+      "missable": false,
+      "target": 5,
+      "difficulty": 4,
+      "time": "4-8 hours",
+      "guide": "Rob 5 bank vaults and escape after each one. Bank vaults are the big robberies: each needs a plan, a crew approach and a getaway. Unlike the small shop robberies, a vault robbery triggers a heavy police response, so the escape matters as much as the robbery — have a fast car and a route planned before you go in. Five separate vaults count; the same vault twice does not.",
+      "steps": [
+        "Find a bank vault and plan the approach and getaway.",
+        "Rob the vault and escape the police.",
+        "Repeat at 5 different vaults."
+      ],
+      "tips": "Do vaults one at a time with full preparation. A failed escape still counts as a robbery attempt, not a completed one.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (5)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 41,
+      "name": "A Classic Blitz Play",
+      "description": "Rob an Armored Truck and escape.",
+      "grade": "bronze",
+      "kind": "heist",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 3,
+      "time": "1-2 hours",
+      "guide": "Rob an armored truck and escape. Armored trucks drive set routes around the city — spot one, block it or ram it to a stop, take the cash, and lose the police. The robbery itself is quick; the escape is the hard part, because the truck's alarm brings a fast response. Have a getaway car ready nearby and a route out of the area planned before you strike.",
+      "steps": [
+        "Find an armored truck on its route.",
+        "Stop it and take the cash.",
+        "Escape the police — the trophy pops once you are clear."
+      ],
+      "tips": "Strike near the edge of the city so the escape is short. A sticky bomb on the rear doors opens the truck fast.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 42,
+      "name": "The Goodtime State",
+      "description": "Explore all of Leonida.",
+      "grade": "bronze",
+      "kind": "collectibles",
+      "hidden": false,
+      "missable": false,
+      "target": 52,
+      "difficulty": 2,
+      "time": "4-8 hours",
+      "guide": "Explore all of Leonida — clear the fog from the whole map, all 52 regions. The map shows fog over places you have not visited; every road, town and coastline counts. A plane is the fastest way: fly low over each region and the fog lifts. The counter is in Progress > Stats, so you can see exactly which regions are left instead of guessing.",
+      "steps": [
+        "Check the map for fogged regions.",
+        "Fly or drive through every region until the fog clears.",
+        "The trophy pops at 52 of 52 regions explored."
+      ],
+      "tips": "A plane at low altitude clears fog faster than any car. Do this on the same sweep as the WAiNK scans and card hunt.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (52)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 43,
+      "name": "Pest Control",
+      "description": "Rob an Illegal Operation belonging to each gang.",
+      "grade": "bronze",
+      "kind": "heist",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 3,
+      "time": "3-6 hours",
+      "guide": "Rob an illegal operation belonging to each gang. Gangs run illegal operations — drug labs, chop shops, smuggling drops — across Leonida, and each gang's operation is a separate target. The official description does not list the gangs or their locations, so this guide does not invent a list: find operations through gang territory on the map and through story contacts, hit one per gang, and check the count after each robbery. Expect armed guards at every operation.",
+      "steps": [
+        "Find an illegal operation in gang territory.",
+        "Rob it and escape.",
+        "Repeat for every gang until each one is done."
+      ],
+      "tips": "Go in armed and with a getaway car. Operations are guarded — stealth helps, but a fast exit matters more.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 44,
+      "name": "In The Beginning…",
+      "description": "Enjoy a cocktail with a view on Ocean Beach.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 1,
+      "time": "Under 1 hour",
+      "guide": "Go to a bar on Ocean Beach, order a cocktail, and enjoy the view. The trophy is a quiet one: sit at a beachfront bar, buy a drink, and the trophy pops once the scene plays out. Ocean Beach is the beachfront strip in Vice City — any bar with a sea view along it should do.",
+      "steps": [
+        "Go to Ocean Beach in Vice City.",
+        "Sit at a beachfront bar and order a cocktail.",
+        "The trophy pops as you drink in the view."
+      ],
+      "tips": "Do this at sunset for the view — and because it is a good moment to take a break from the grind.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 45,
+      "name": "Capital Offense",
+      "description": "Smash your way out of a vehicle showroom in classic style.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Under 1 hour",
+      "guide": "Drive a car through a vehicle showroom's window and out the other side — the classic smash-and-grab exit. Pick a showroom with a big glass front, line up a fast car outside, and drive straight through the glass and out. The trophy pops once you are out the far side. Expect a wanted level and a broken car, so use a car you do not care about.",
+      "steps": [
+        "Find a vehicle showroom with a glass front.",
+        "Line up a fast car outside, facing the glass.",
+        "Drive through the showroom and out the other side."
+      ],
+      "tips": "Speed matters more than the car: a long straight run-up gives you the momentum to clear the showroom in one go.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 46,
+      "name": "Let’s Go Bowling",
+      "description": "Follow-through at the Kolt & Associates' bowling alley.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Under 1 hour",
+      "guide": "Go to the Kolt & Associates bowling alley and bowl a proper game — follow through on the lane. The name is the place: Kolt & Associates' bowling alley, and the trophy is about playing a full game there rather than a single throw. Bowl the game through to its end and the trophy pops at the final frame.",
+      "steps": [
+        "Go to the Kolt & Associates bowling alley.",
+        "Start a game and bowl it through to the final frame."
+      ],
+      "tips": "Bowling is also one of the 9 activity types for Master of None. A strike is not required — finishing the game is.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 47,
+      "name": "Personal Best",
+      "description": "A partnership with mass appeal.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "1-3 hours",
+      "guide": "The description gives nothing away — 'a partnership with mass appeal' is a riddle, not an instruction. What it points at is a partnership activity done to its best: play the partner activities with your partner and set a personal best together. The honest version of this guide: the official description does not say which activity or what score, so do the partner activities (bowling, darts, pool, races) with your partner and chase the best score in each — the trophy is tied to one of them. Check the partner-activity menu for a personal-best tracker to see which one is still open.",
+      "steps": [
+        "Play partner activities with your partner — bowling, darts, pool, races.",
+        "Chase a personal best in each one.",
+        "Check the partner-activity tracker for the one still open."
+      ],
+      "tips": "This guide does not invent a specific activity for this trophy: the description hides it, and the partner-activity tracker in the game is the source of truth.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 48,
+      "name": "Actions Speak Louder",
+      "description": "Choices made (for better or worse).",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": 500,
+      "difficulty": 3,
+      "time": "10-20 hours",
+      "guide": "Take 500 actions that change your Criminal Profile. The Criminal Profile is the game's record of what kind of criminal you are — every crime, choice and action feeds it. The description hides the number, but PSN tracks it: 500 profile-changing actions. There is no single trick: play the game, make choices, commit crimes, finish missions and activities, and the counter climbs. The profile screen shows your progress, so check it after sessions to see what is moving it fastest.",
+      "steps": [
+        "Open your Criminal Profile to see the current count.",
+        "Play missions, commit crimes and finish activities — each counts.",
+        "Reach 500 profile-changing actions."
+      ],
+      "tips": "This is a background counter, not a grind: by the time the rest of the list is nearly done, this is usually close too. If it lags, vary what you do — the profile rewards variety.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (500)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 49,
+      "name": "Bad Luck, I Guess",
+      "description": "Second time's the charm.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "1-3 hours",
+      "guide": "The description is a riddle: 'second time's the charm'. What it means is to fail something once, then succeed on the second try — a retry trophy. The most reliable reading, from the community's guides: retry a failed activity or mission and complete it on the second attempt. If a mission or activity fails, do not reload an old save — retry it immediately and finish it, and the trophy pops on the successful second attempt.",
+      "steps": [
+        "Fail a mission or activity once.",
+        "Retry it immediately — do not reload an older save.",
+        "Complete it on the second attempt."
+      ],
+      "tips": "Do not force this early: it happens naturally during a long playthrough. If it has not popped by the cleanup phase, fail an easy race on purpose, then win the retry.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap", "PowerPyx — GTA 6 Trophy Guide"]
+    },
+    {
+      "id": 50,
+      "name": "The Truth Is Out There",
+      "description": "What the hell just happened?",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "1-3 hours",
+      "guide": "The description is a riddle: 'what the hell just happened?' points at a strange, unexplained event in the world — the kind of odd encounter that makes you stop and stare. Leonida has scripted weird encounters: strange lights, odd characters, unexplained scenes in remote places. Explore the odd corners of the map — the swamps, the desert roads, the far beaches — and trigger one of these encounters. The community's guides list the encounter spots; this guide does not invent one, because the official description names none.",
+      "steps": [
+        "Explore Leonida's remote and odd corners — swamps, desert roads, far beaches.",
+        "Trigger a strange scripted encounter.",
+        "The trophy pops when the encounter plays out."
+      ],
+      "tips": "This is the list's most deliberately vague trophy. If it has not popped by the cleanup phase, check a community guide for the encounter spots rather than wandering at random.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap", "PowerPyx — GTA 6 Trophy Guide"]
+    },
+    {
+      "id": 51,
+      "name": "Ten Pin",
+      "description": "Bowl 'em over with a melee drive-by.",
+      "grade": "bronze",
+      "kind": "activities",
+      "hidden": true,
+      "missable": false,
+      "target": null,
+      "difficulty": 3,
+      "time": "1-2 hours",
+      "guide": "Bowl enemies over with a melee drive-by — hit pedestrians or enemies with a melee weapon while driving past in a vehicle. The name says it: ten-pin bowling, but the pins are people and the ball is your car. Drive slowly through a crowded area, swing a melee weapon (a bat works) from the moving vehicle, and knock people down. The trophy pops once the game registers the melee drive-by.",
+      "steps": [
+        "Get a melee weapon and a slow vehicle.",
+        "Drive through a crowded area.",
+        "Swing the melee weapon from the moving vehicle and bowl people over."
+      ],
+      "tips": "A slow drive is better than a fast one — you need time to connect the swing. A beach promenade or a market street has the crowds.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 52,
+      "name": "Dime on the Dollar",
+      "description": "Earn $250,000 laundering Marked Bills through your contacts.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": "$250,000",
+      "difficulty": 3,
+      "time": "8-15 hours",
+      "guide": "Earn $250,000 by laundering Marked Bills through your contacts. Marked Bills are the dirty cash from heists and robberies — they cannot be spent directly, so they must be laundered through contacts who take a cut. The more you rob, the more Marked Bills you hold; launder them steadily through your contacts instead of letting them pile up. The contacts menu shows how much you have laundered so far.",
+      "steps": [
+        "Rob heists, vaults and shops to earn Marked Bills.",
+        "Launder them through your contacts.",
+        "Reach $250,000 laundered in total."
+      ],
+      "tips": "Launder little and often — the contacts take a cut either way, and a steady flow beats one huge pile at the end.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target ($250,000)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 53,
+      "name": "Treat Yo Self",
+      "description": "Spend $100,000 across all shops.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": "$100,000",
+      "difficulty": 2,
+      "time": "Across the playthrough",
+      "guide": "Spend $100,000 across all shops — clothes, weapons, food, car mods, anything sold in a shop counts. The counter is cumulative across the whole playthrough, so most players are well on their way by the end of the story without trying. If it lags, buy weapon upgrades and car modifications — they are the biggest single purchases, and they make the rest of the list easier too.",
+      "steps": [
+        "Shop normally through the story — clothes, food, ammo.",
+        "Spend the rest on weapon upgrades and car mods.",
+        "The trophy pops at $100,000 spent in total."
+      ],
+      "tips": "Do not waste money on throwaway purchases early: save the big spending for upgrades you actually want.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target ($100,000)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 54,
+      "name": "Little Boxes",
+      "description": "Purchase all garage properties.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": null,
+      "difficulty": 2,
+      "time": "Across the playthrough",
+      "guide": "Purchase every garage property in Leonida. Garages are bought through the property menu — the map shows which are for sale, and the menu shows which you already own. They are not cheap, so this is a late-game trophy: earn money from heists and laundering first, then buy the garages in one sweep. Owning garages also gives you somewhere to store the vehicles you discover for Whip It Good.",
+      "steps": [
+        "Open the property menu and list the garage properties.",
+        "Earn money from heists, robberies and laundering.",
+        "Buy every garage property."
+      ],
+      "tips": "Buy garages after the story, when money is plentiful — they are a money sink, not an early purchase.",
+      "sources": ["Exophase — official name, description and grade", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    },
+    {
+      "id": 55,
+      "name": "On the Spot",
+      "description": "Register 10 vehicles to the Scooter Bros app.",
+      "grade": "bronze",
+      "kind": "open-world",
+      "hidden": false,
+      "missable": false,
+      "target": 10,
+      "difficulty": 2,
+      "time": "2-4 hours",
+      "guide": "Register 10 vehicles to the Scooter Bros app. Scooter Bros is the vehicle delivery app on your phone: find a vehicle, open the app, and register it. Any 10 distinct vehicles count — cars, bikes and more. Register the vehicles you discover for Whip It Good and you will finish both trophies on the same sweep.",
+      "steps": [
+        "Find a vehicle you have not registered.",
+        "Open the Scooter Bros app on your phone and register it.",
+        "Repeat for 10 different vehicles."
+      ],
+      "tips": "Register vehicles as you discover them — the two trophies share the same habit.",
+      "sources": ["Exophase — official name, description and grade", "PSNProfiles — PSN progress target (10)", "PushSquare — GTA 6 Trophy Guide & Roadmap"]
+    }
+  ]
 }

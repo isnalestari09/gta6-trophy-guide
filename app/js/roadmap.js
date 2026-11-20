@@ -1,46 +1,83 @@
-/* roadmap.js — the six ordered phases to the platinum, built from the trophies. */
-export const PHASES = [
+// Leonida Platinum v3 — the six-phase platinum roadmap.
+// Phase order wastes the least time: story first (so nothing story-gated is
+// missed), then strangers, then a sweep of activities and collectibles,
+// then the crime grind, with the long counters ticking up throughout.
+// Trophy ids follow the official list order in app/data/trophies.json.
+
+export const ROADMAP_PHASES = [
   {
-    title: "Phase 1 — Story first",
-    note: "Play Chapters 1–4 and the final mission in order. Every story trophy pops on completion, so there is nothing extra to do — just finish the story.",
-    ids: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    phase: 1,
+    title: 'Play the story — and meditate as you go',
+    when: 'First playthrough, Chapters 1–4 and the finale',
+    trophyIds: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+    advice: [
+      'Just play the story. All 12 story trophies unlock by finishing missions — none can be missed.',
+      'Meditate at every spot you pass. Positive Mental Attitude is the list’s only missable trophy: one meditation spot is tied to a story moment, so do them as they appear instead of leaving them all for later.',
+      'Say yes to every activity the story offers you — fishing with Cal, the arcade, bowling — it all counts toward later phases.',
+    ],
   },
   {
-    title: "Phase 2 — Side strands & strangers",
-    note: "Finish the five side-character finales and eight stranger strands. They unlock as the story progresses, so clear them as their markers appear.",
-    ids: [22, 23, 24, 25, 26, 27],
+    phase: 2,
+    title: 'Strangers and side stories',
+    when: 'After the story, or between chapters in free roam',
+    trophyIds: [22, 23, 24, 25, 26, 27, 29],
+    advice: [
+      'Finish the final mission for Andy, Kenton, Billy, Randy and Tyrone — each one is its own trophy.',
+      'Complete 8 stranger mission strands across Leonida for Strangers & Freaks; the map marks them once you meet each stranger.',
+      'Hunt a unique animal for Bret (Fair Game) while you are out in the wilds — the hunt starts from Bret, not from random animals.',
+    ],
   },
   {
-    title: "Phase 3 — Activities & skill",
-    note: "Races, the shooting range, drone races, fishing, arcade, bowling, stunts and challenges. Do the quick ones early; the 250 stunts and 42 gold shooting medals are the long grinds here.",
-    ids: [15, 16, 17, 18, 19, 20, 21, 32, 46],
+    phase: 3,
+    title: 'Activities sampler',
+    when: 'Any time after the story opens the map',
+    trophyIds: [16, 17, 18, 19, 20, 21, 46, 51],
+    advice: [
+      'Try each of the 9 activity types once for Master of None: fishing, hunting, golf, shooting range, pool, basketball, a video game, a race and a stunt.',
+      'Beat Cal in a fishing challenge, finish one arcade game, and bowl a strike at the Kolt & Associates alley.',
+      'Win 20 different races and a Top Fun drone race at every one of the 14 locations — the drone races also feed the 100% checklist.',
+    ],
   },
   {
-    title: "Phase 4 — Collectibles & exploration",
-    note: "Meditation spots first — they are the one missable. Then cards, WAiNK photos, vehicles, areas, garages and Scooter Bros registrations, area by area.",
-    ids: [28, 29, 30, 31, 35, 42, 54, 55],
+    phase: 4,
+    title: 'Collectibles and the map',
+    when: 'With a vehicle and the whole map open',
+    trophyIds: [28, 30, 31, 32, 35, 42],
+    advice: [
+      'WAiNK It at 100 locations and complete 3 Collectible Card sets — use the in-game tracker, not memory.',
+      'Discover 100 vehicles (a WAiNK scan counts) and clear the fog from the whole map for The Goodtime State — a plane is the fastest way.',
+      'Complete 50 of the 80 Challenges. The 100% checklist later asks for 70, so keep going past 50.',
+    ],
   },
   {
-    title: "Phase 5 — Combat & chaos",
-    note: "Combat Focus, Rhinos, vaults, armored trucks, gang operations and the jewelry store. Bring armour, explosives and a fast getaway car.",
-    ids: [36, 37, 38, 39, 40, 41, 43, 51],
+    phase: 5,
+    title: 'Heists, robberies and combat',
+    when: 'Free roam, with good weapons and a fast car',
+    trophyIds: [33, 34, 36, 37, 38, 39, 40, 41, 43, 45],
+    advice: [
+      'Do the partner crimes with your partner beside you: lose a 4-star wanted level together, and rob 3 shops back-to-back without losing the wanted level.',
+      'Rob 5 bank vaults, one armored truck and a jewelry store undetected, plus one illegal operation per gang.',
+      'Take down 5 enemies in a single Combat Focus for Gunslinger — start it in a crowd, not against one enemy.',
+    ],
   },
   {
-    title: "Phase 6 — Open-world cleanup & money",
-    note: "Wanted-level escapes, shop robberies, the cocktail on Ocean Beach, the showroom smash, the strange event, choices and spending. Then 100% completion for the gold, and the platinum pops.",
-    ids: [33, 34, 44, 45, 47, 48, 49, 50, 52, 53, 14],
+    phase: 6,
+    title: 'The long grind and 100%',
+    when: 'Last — most of this is already half done',
+    trophyIds: [1, 14, 15, 44, 47, 48, 49, 50, 52, 53, 54, 55],
+    advice: [
+      'Finish the 250 stunts (only 250 of 397 are needed for the trophy; 100% asks for 300) and gold all 42 Shooting Range challenges.',
+      'Launder $250,000 in Marked Bills, spend $100,000 across shops, buy every garage property and register 10 vehicles to Scooter Bros.',
+      'Attain 100% Completion for A Long Road — then Vice Got a Price!, the platinum, unlocks on its own.',
+    ],
   },
 ];
 
-export function phaseProgress(phase, trophiesById, earned) {
-  const done = phase.ids.filter((id) => earned.has(id)).length;
-  return { done, total: phase.ids.length, pct: Math.round((done / phase.ids.length) * 100) };
+export function phaseProgress(phase, earnedSet) {
+  const earned = phase.trophyIds.filter((id) => earnedSet.has(id)).length;
+  return { earned, total: phase.trophyIds.length };
 }
 
-export function nextUp(trophies, earned) {
-  for (const phase of PHASES) {
-    const nextId = phase.ids.find((id) => !earned.has(id));
-    if (nextId) return { phase: phase.title, trophy: trophies.find((t) => t.id === nextId) };
-  }
-  return null;
+export function nextUnfinishedPhase(earnedSet) {
+  return ROADMAP_PHASES.find((phase) => phase.trophyIds.some((id) => !earnedSet.has(id))) ?? null;
 }
