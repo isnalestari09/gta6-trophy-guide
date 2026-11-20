@@ -1,72 +1,46 @@
-// Roadmap to the platinum: five stages in order, built from the official
-// descriptions. Each stage lists the trophy ids it covers and the order to
-// earn them in. Stage 1 holds the one missable trophy, so it comes first.
-export const ROADMAP_STAGES = [
+/* roadmap.js — the six ordered phases to the platinum, built from the trophies. */
+export const PHASES = [
   {
-    number: 1,
-    name: 'Story first, and the one missable',
-    text: 'Play Chapters 1 to 4 and the final mission, and take every stranger strand as it opens. Do the Chapter 1 meditation the moment it is offered: it is the only trophy that can be missed. Story trophies are automatic, so this stage is just the playthrough.',
-    ids: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 22, 23, 24, 26, 27, 28, 29],
+    title: "Phase 1 — Story first",
+    note: "Play Chapters 1–4 and the final mission in order. Every story trophy pops on completion, so there is nothing extra to do — just finish the story.",
+    ids: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
   },
   {
-    number: 2,
-    name: 'Activities and side content',
-    text: 'After the story, or between missions, work the activities: the shooting range golds, the races, the challenges, the robberies, the partner trophies and the money trophies. The tracker counts 9 activity types under Touchpad, then Progress, then Activities.',
-    ids: [15, 16, 17, 18, 19, 20, 21, 25, 32, 33, 34, 36, 37, 38, 39, 40, 41, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55],
+    title: "Phase 2 — Side strands & strangers",
+    note: "Finish the five side-character finales and eight stranger strands. They unlock as the story progresses, so clear them as their markers appear.",
+    ids: [22, 23, 24, 25, 26, 27],
   },
   {
-    number: 3,
-    name: 'Collectibles and exploration',
-    text: 'Sweep Leonida region by region: card sets, WAiNK spots, vehicle scans and the map itself. Do this after the story, when the whole map is open and fast travel is free.',
-    ids: [30, 31, 35, 42],
+    title: "Phase 3 — Activities & skill",
+    note: "Races, the shooting range, drone races, fishing, arcade, bowling, stunts and challenges. Do the quick ones early; the 250 stunts and 42 gold shooting medals are the long grinds here.",
+    ids: [15, 16, 17, 18, 19, 20, 21, 32, 46],
   },
   {
-    number: 4,
-    name: 'The 100% checklist',
-    text: 'Open Progress, then Stats, then 100% Completion and finish the checklist. It is roughly 60% of true completion, per PowerPyx, so most of it is already done from the earlier stages. Nothing on it is missable.',
-    ids: [14],
+    title: "Phase 4 — Collectibles & exploration",
+    note: "Meditation spots first — they are the one missable. Then cards, WAiNK photos, vehicles, areas, garages and Scooter Bros registrations, area by area.",
+    ids: [28, 29, 30, 31, 35, 42, 54, 55],
   },
   {
-    number: 5,
-    name: 'Platinum',
-    text: 'Vice Got a Price! pops the moment the 54th other trophy unlocks. No separate task, just the last trophy standing.',
-    ids: [1],
+    title: "Phase 5 — Combat & chaos",
+    note: "Combat Focus, Rhinos, vaults, armored trucks, gang operations and the jewelry store. Bring armour, explosives and a fast getaway car.",
+    ids: [36, 37, 38, 39, 40, 41, 43, 51],
+  },
+  {
+    title: "Phase 6 — Open-world cleanup & money",
+    note: "Wanted-level escapes, shop robberies, the cocktail on Ocean Beach, the showroom smash, the strange event, choices and spending. Then 100% completion for the gold, and the platinum pops.",
+    ids: [33, 34, 44, 45, 47, 48, 49, 50, 52, 53, 14],
   },
 ];
 
-export function renderRoadmap(trophies, earned, container) {
-  const byId = new Map(trophies.map((t) => [t.id, t]));
-  container.replaceChildren();
-  for (const stage of ROADMAP_STAGES) {
-    const li = document.createElement('li');
-    const done = stage.ids.filter((id) => earned.has(id)).length;
-    const head = document.createElement('div');
-    head.className = 'stage-head';
-    const num = document.createElement('span');
-    num.className = 'stage-num';
-    num.textContent = `Stage ${stage.number}`;
-    const name = document.createElement('h3');
-    name.className = 'stage-name';
-    name.textContent = `${stage.name} — ${done} of ${stage.ids.length} earned`;
-    head.append(num, name);
-    const text = document.createElement('p');
-    text.textContent = stage.text;
-    const list = document.createElement('p');
-    list.className = 'stage-trophies';
-    list.innerHTML = stage.ids
-      .map((id) => {
-        const t = byId.get(id);
-        if (!t) return '';
-        const mark = earned.has(id) ? '✓ ' : '';
-        const flag = t.missable ? ' ⚠ missable' : '';
-        return `<b>${mark}${escapeHtml(t.name)}</b> (${t.grade}${flag})`;
-      })
-      .join(' · ');
-    li.append(head, text, list);
-    container.append(li);
-  }
+export function phaseProgress(phase, trophiesById, earned) {
+  const done = phase.ids.filter((id) => earned.has(id)).length;
+  return { done, total: phase.ids.length, pct: Math.round((done / phase.ids.length) * 100) };
 }
 
-function escapeHtml(value) {
-  return value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+export function nextUp(trophies, earned) {
+  for (const phase of PHASES) {
+    const nextId = phase.ids.find((id) => !earned.has(id));
+    if (nextId) return { phase: phase.title, trophy: trophies.find((t) => t.id === nextId) };
+  }
+  return null;
 }
