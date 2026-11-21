@@ -1,113 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Platinum — GTA VI Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: checklist, roadmap to the platinum, missables, and a cited guide for every trophy.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="topbar">
+<header class="top">
   <div class="brand">
-    <div class="brand-mark" aria-hidden="true">LP</div>
-    <div>
-      <h1>Leonida Platinum</h1>
-      <p class="subtitle">GTA VI trophy guide &amp; tracker — all 55 PS5 trophies, offline</p>
-    </div>
+    <h1>LEONIDA PLATINUM</h1>
+    <p class="sub">GTA VI — all 55 PS5 trophies · cited guide · tracker · roadmap · missables</p>
   </div>
-  <div class="progress-box" id="progressBox" aria-live="polite">
-    <div class="progress-count"><span id="earnedCount">0</span><span class="of">/ 55</span></div>
-    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-    <p class="progress-note" id="progressNote">Platinum progress</p>
+  <div class="shield">
+    <label class="spoiler-toggle" title="Spoiler Shield hides the 28 PSN-hidden trophies' names and descriptions">
+      <span>Spoiler Shield</span>
+      <button id="spoilerBtn" type="button" aria-pressed="true">ON — hiding 28 hidden trophies</button>
+    </label>
   </div>
 </header>
-
-<nav class="tabs" id="tabs" aria-label="Guide sections">
-  <button class="tab active" data-view="checklist" type="button">Checklist</button>
-  <button class="tab" data-view="roadmap" type="button">Roadmap</button>
-  <button class="tab" data-view="missables" type="button">Missables</button>
-  <button class="tab" data-view="about" type="button">About &amp; sources</button>
+<nav class="tabs" aria-label="Sections">
+  <a href="#/tracker" data-tab="tracker">Tracker</a>
+  <a href="#/roadmap" data-tab="roadmap">Roadmap</a>
+  <a href="#/missables" data-tab="missables">Missables</a>
+  <a href="#/sources" data-tab="sources">Sources &amp; Audit</a>
 </nav>
-
-<main id="main">
-  <section id="view-checklist" class="view">
-    <div class="toolbar" id="toolbar">
-      <label class="search-box">
-        <span class="visually-hidden">Search trophies</span>
-        <input type="search" id="searchInput" placeholder="Search a trophy or guide…" autocomplete="off">
-      </label>
-      <label class="filter">
-        Grade
-        <select id="gradeFilter">
-          <option value="">All grades</option>
-          <option value="platinum">Platinum</option>
-          <option value="gold">Gold</option>
-          <option value="silver">Silver</option>
-          <option value="bronze">Bronze</option>
-        </select>
-      </label>
-      <label class="filter">
-        Kind
-        <select id="kindFilter">
-          <option value="">All kinds</option>
-          <option value="story">Story</option>
-          <option value="side">Strangers &amp; side</option>
-          <option value="activities">Activities</option>
-          <option value="collectibles">Collectibles</option>
-          <option value="open-world">Open world</option>
-          <option value="heist">Heists &amp; crime</option>
-        </select>
-      </label>
-      <label class="toggle"><input type="checkbox" id="missableOnly"> Missable only</label>
-      <label class="toggle"><input type="checkbox" id="earnedOnly"> Earned only</label>
-      <label class="toggle spoiler-toggle"><input type="checkbox" id="spoilerToggle"> Hide story spoilers</label>
-    </div>
-    <p class="result-line" id="resultLine"></p>
-    <div class="layout">
-      <ul class="trophy-list" id="trophyList"></ul>
-      <aside class="detail" id="detailPane" aria-live="polite">
-        <p class="detail-empty">Pick a trophy to see its full guide, sources and steps.</p>
-      </aside>
-    </div>
-  </section>
-
-  <section id="view-roadmap" class="view" hidden>
-    <h2>Roadmap to the platinum</h2>
-    <p class="lede">Six phases, in the order that wastes the least time. Finish the story first, then the
-      strangers, then sweep activities and collectibles, then the crime grind — and let the long counters
-      tick up while you do everything else.</p>
-    <p class="estimate" id="timeEstimate"></p>
-    <div id="roadmapList"></div>
-    <div class="next-up" id="nextUp"></div>
-  </section>
-
-  <section id="view-missables" class="view" hidden>
-    <h2>Missable trophies</h2>
-    <p class="lede">Only one trophy in the whole list can be missed. Everything else can be earned after the
-      story, in free roam. Read this before you start — it is the one thing that can cost you a second playthrough.</p>
-    <div id="missablesList"></div>
-  </section>
-
-  <section id="view-about" class="view" hidden>
-    <h2>About &amp; sources</h2>
-    <div id="aboutBody"></div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="save-row">
-    <button type="button" id="exportBtn">Export progress</button>
-    <label class="import-label">Import progress <input type="file" id="importInput" accept=".json,application/json" hidden></label>
-    <button type="button" id="shareBtn">Copy share link</button>
-    <button type="button" id="resetBtn">Reset progress</button>
-    <span class="save-status" id="saveStatus" aria-live="polite"></span>
-  </div>
-  <p class="fineprint">Leonida Platinum is an unofficial fan guide. Grand Theft Auto and GTA are trademarks of
-    Take-Two Interactive; this guide uses no Rockstar logo, artwork or game screenshots. Trophy names and
-    descriptions are shown as PlayStation publishes them. Progress is saved only in this browser.</p>
+<section id="audit" class="audit" aria-live="polite">Loading citation audit…</section>
+<main id="view" aria-live="polite"></main>
+<footer>
+  <p>All 55 trophies: official names &amp; descriptions from Exophase, grades &amp; targets from PSNProfiles (blocked 403 on 21 Nov 2026 — targets cross-checked via search), methods from PowerPyx, KeenGamer, GTAScoop, TechForNerd, Mobalytics, CryptoGames, EGamers. Read 21 Nov 2026. Works offline from its own files — no network needed.</p>
+  <p>Not affiliated with Rockstar Games, Sony, or PlayStation. GTA VI trophy names belong to their owners; guide text is original.</p>
 </footer>
-
-<script type="module" src="js/main.js"></script>
+<script src="js/store.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/views.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

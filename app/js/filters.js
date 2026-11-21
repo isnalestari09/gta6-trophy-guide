@@ -1,26 +1,26 @@
-// Leonida Platinum v3 — filtering, search and the spoiler rule.
-// The spoiler rule: with spoilers on, story trophies that are not earned yet
-// show only "Hidden story trophy" instead of their name and description.
-
-export function trophyMatchesSearch(trophy, query) {
-  if (!query) return true;
-  const haystack = [
-    trophy.name, trophy.description, trophy.guide,
-    ...(trophy.steps ?? []), trophy.kind, trophy.grade,
-  ].join(' ').toLowerCase();
-  return query.toLowerCase().split(/\s+/).every((word) => haystack.includes(word));
-}
-
-export function applyFilters(trophies, filters, earnedSet) {
-  return trophies.filter((trophy) => {
-    if (filters.grade && trophy.grade !== filters.grade) return false;
-    if (filters.kind && trophy.kind !== filters.kind) return false;
-    if (filters.missableOnly && !trophy.missable) return false;
-    if (filters.earnedOnly && !earnedSet.has(trophy.id)) return false;
-    return trophyMatchesSearch(trophy, filters.query);
-  });
-}
-
-export function isSpoilerHidden(trophy, spoilersOn, earnedSet) {
-  return spoilersOn && trophy.kind === 'story' && !earnedSet.has(trophy.id);
-}
+// filters.js — tracker filter state (grade, kind, search, missable-only, earned-only).
+var Filters = (function () {
+  var state = { grade: 'all', kind: 'all', q: '', missableOnly: false, earnedOnly: false };
+  function set(patch) { Object.assign(state, patch); }
+  function get() { return state; }
+  function apply(trophies) {
+    var q = state.q.trim().toLowerCase();
+    return trophies.filter(function (t) {
+      if (state.grade !== 'all' && t.grade !== state.grade) return false;
+      if (state.kind !== 'all' && t.kind !== state.kind) return false;
+      if (state.missableOnly && !t.missable) return false;
+      if (state.earnedOnly && !Store.isEarned(t.id)) return false;
+      if (q) {
+        var hay = (t.name + ' ' + t.description + ' ' + (t.guide || '')).toLowerCase();
+        if (hay.indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+  function kinds(trophies) {
+    var seen = {};
+    trophies.forEach(function (t) { seen[t.kind] = true; });
+    return Object.keys(seen).sort();
+  }
+  return { set: set, get: get, apply: apply, kinds: kinds };
+})();
